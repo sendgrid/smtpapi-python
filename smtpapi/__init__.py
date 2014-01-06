@@ -8,12 +8,18 @@ class SMTPAPIHeader(object):
     def __init__(self):
         self.data = {}
 
+    def add_to(self, to):
+        self.data.to.append(to)
+
+    def set_tos(self, tos):
+        self.data.to = tos
+
     def add_substitution(self, key, value):
         if 'sub' not in self.data:
             self.data['sub'] = {}
         self.data[key].append(value)
 
-    def set_substitution(self, key, value):
+    def set_substitutions(self, key, value):
         if 'sub' not in self.data:
             self.data['sub'] = {}
         if type(value) is str:
@@ -21,7 +27,7 @@ class SMTPAPIHeader(object):
         elif type(value) is list:
             self.data[key] = value
 
-    def add_unique_args(self, key, value):
+    def add_unique_arg(self, key, value):
         if 'unique_args' not in self.data:
             self.data['unique_args'] = {}
         self.data['unique_args'][key] = value
@@ -35,7 +41,7 @@ class SMTPAPIHeader(object):
             self.data['category'] = []
         self.data['category'].append(category)
 
-    def set_category(self, category):
+    def set_categories(self, category):
         self.data['category'] = category
 
     def add_section(self, key, section):
@@ -43,7 +49,7 @@ class SMTPAPIHeader(object):
             self.data['section'] = {}
         self.data['section'][key] = section
 
-    def set_section(self, value):
+    def set_sections(self, value):
         self.data['section'] = value
 
     def add_filter(self, app, setting, val):
@@ -55,6 +61,6 @@ class SMTPAPIHeader(object):
             self.data['filters'][app]['settings'] = {}
         self.data['filters'][app]['settings'][setting] = val
 
-    def api_header_as_json(self):
+    def json_string(self):
         return json.dumps(self.data)
 
