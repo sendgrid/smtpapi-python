@@ -5,10 +5,13 @@ except ImportError:
 
 
 class SMTPAPIHeader(object):
+
     def __init__(self):
         self.data = {}
 
     def add_to(self, to):
+        if 'to' not in self.data:
+            self.data['to'] = []
         self.data.to.append(to)
 
     def set_tos(self, tos):
