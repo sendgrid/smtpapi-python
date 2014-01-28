@@ -23,7 +23,7 @@ class SMTPAPIHeader(object):
         if 'sub' not in self.data:
             self.data['sub'] = {}
         if type(value) is str:
-            self.data[key] = [val]
+            self.data[key] = [value]
         elif type(value) is list:
             self.data[key] = value
 
@@ -33,7 +33,7 @@ class SMTPAPIHeader(object):
         self.data['unique_args'][key] = value
 
     def set_unique_args(self, value):
-        if type(val) is dict:
+        if type(value) is dict:
             self.data['unique_args'] = value
 
     def add_category(self, category):
