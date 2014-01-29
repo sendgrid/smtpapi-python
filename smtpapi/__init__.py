@@ -12,23 +12,27 @@ class SMTPAPIHeader(object):
     def add_to(self, to):
         if 'to' not in self.data:
             self.data['to'] = []
-        self.data.to.append(to)
+        self.data['to'].append(to)
 
     def set_tos(self, tos):
-        self.data.to = tos
+        self.data['to'] = tos
 
     def add_substitution(self, key, value):
         if 'sub' not in self.data:
             self.data['sub'] = {}
-        self.data[key].append(value)
+        if key not in self.data['sub']:
+            self.data['sub'][key] = []
+        self.data['sub'][key].append(value)
 
     def set_substitutions(self, key, value):
         if 'sub' not in self.data:
             self.data['sub'] = {}
+        if key not in self.data['sub']:
+            self.data['sub'][key] = []
         if type(value) is str:
-            self.data[key] = [value]
+            self.data['sub'][key] = [value]
         elif type(value) is list:
-            self.data[key] = value
+            self.data['sub'][key] = value
 
     def add_unique_arg(self, key, value):
         if 'unique_args' not in self.data:
