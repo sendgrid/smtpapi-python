@@ -5,4 +5,4 @@ python:
   - "3.2"
   - "3.3"
 
-script: python test/__init__.p
+script: python test/__init__.py
