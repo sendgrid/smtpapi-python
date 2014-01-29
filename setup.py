@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='smtpapi',
-    version='0.1.0',
+    version='0.1.1',
     author='Yamil Asusta, Kane Kim',
     author_email='yamil@sendgrid.com, kane.isturm@sendgrid.com',
     packages=find_packages(),
