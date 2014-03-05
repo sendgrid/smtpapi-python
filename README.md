@@ -29,7 +29,7 @@ header.set_tos(['email@email.com'])
 
 ```python
 header.add_substitution('key', 'value')
-header.set_substitutions('key', ['value1', 'value2'])
+header.set_substitutions({'key': ['value1', 'value2']})
 ```
 
 ### [Unique Arguments](http://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html)
