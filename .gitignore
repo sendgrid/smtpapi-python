@@ -5,3 +5,7 @@ dist
 eggs
 build
 sdist
+.Python
+bin/
+include/
+lib/
