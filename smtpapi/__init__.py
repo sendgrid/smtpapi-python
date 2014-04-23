@@ -58,7 +58,8 @@ class SMTPAPIHeader(object):
         self.data['filters'][app]['settings'][setting] = val
 
     def json_string(self):
+        result = {}
         for key in self.data.keys():
-            if self.data[key] == [] or self.data[key] == {}:
-                del self.data[key]
-        return json.dumps(self.data)
+            if self.data[key] != [] and self.data[key] != {}:
+                result[key] = self.data[key]
+        return json.dumps(result)
