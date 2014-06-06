@@ -1,9 +1,17 @@
 language: python
 python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-
+- '2.6'
+- '2.7'
+- '3.2'
+- '3.3'
 install: python setup.py install
 script: python test/__init__.py
+notifications:
+  hipchat:
+    rooms:
+      secure: ZZZ8REjuy5atAjuQtQfRHGtOn/QMyhCaTHQ9phxOyabmtQ9YLP0qz+iLkCiDy2DVvs+Mq3fGbO+JYEJ8JarLUj8I5jwF+QuxCBRcdz0AOSYI6eyeR6XKtErXplmkRP/F1ZindWjZrf5+ZyJ+Y4mk7/MqjBbypqnt7VeZwapSwag=
+    template:
+    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
+      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
+      <a href="https://github.com/sendgrid/docs/commits/%{commit}">View on GitHub</a>'
+    format: html
