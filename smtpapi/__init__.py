@@ -9,7 +9,10 @@ class SMTPAPIHeader(object):
     def add_to(self, to):
         if 'to' not in self.data:
             self.data['to'] = []
-        self.data['to'].append(to)
+        if type(to) is list:
+            self.data['to'] += to
+        else:
+            self.data['to'].append(to)
 
     def set_tos(self, tos):
         self.data['to'] = tos

@@ -6,7 +6,8 @@ from smtpapi import SMTPAPIHeader
 class TestSMTPAPI(unittest.TestCase):
 
     def setUp(self):
-        self.validHeader = json.loads('''{"to":["test@email.com"],
+        self.validHeader = json.loads('''{"to":["test@email.com",
+        "test2@email.com", "test3@email.com"],
         "sub":{"subKey":["subValue"]},
         "section":{"testSection":"sectionValue"},
         "category":["testCategory"],
@@ -21,6 +22,7 @@ class TestSMTPAPI(unittest.TestCase):
     def test_add(self):
         header = SMTPAPIHeader()
         header.add_to('test@email.com')
+        header.add_to(['test2@email.com', 'test3@email.com'])
         header.add_substitution('subKey', 'subValue')
         header.add_section('testSection', 'sectionValue')
         header.add_category('testCategory')
@@ -30,7 +32,7 @@ class TestSMTPAPI(unittest.TestCase):
 
     def test_set(self):
         header = SMTPAPIHeader()
-        header.set_tos(["test@email.com"])
+        header.set_tos(["test@email.com", "test2@email.com", "test3@email.com"])
         header.set_substitutions(json.loads('{"subKey":["subValue"]}'))
         header.set_sections(json.loads('{"testSection":"sectionValue"}'))
         header.set_categories(["testCategory"])
