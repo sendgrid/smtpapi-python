@@ -60,6 +60,12 @@ class SMTPAPIHeader(object):
             self.data['filters'][app]['settings'] = {}
         self.data['filters'][app]['settings'][setting] = val
 
+    def set_asm_group_id(self, value):
+        if not bool(value):
+            self.data['asm_group_id'] = {}
+        else:
+            self.data['asm_group_id'] = value
+
     def json_string(self):
         result = {}
         for key in self.data.keys():
