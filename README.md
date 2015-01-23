@@ -64,6 +64,14 @@ header.add_filter('filter', 'setting', 'value')
 header.set_asm_group_id(value)
 ```
 
+### [Scheduling Parameters](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
+
+```python
+header.add_send_each_at(unix_timestamp)
+header.set_send_each_at([])
+header.set_send_at(unix_timestamp)
+```
+
 ### Get Headers
 
 ```python
