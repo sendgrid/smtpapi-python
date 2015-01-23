@@ -58,6 +58,12 @@ header.set_sections({'key1':'section1', 'key2':'section2'})
 header.add_filter('filter', 'setting', 'value')
 ```
 
+### [ASM Group ID](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
+
+```python
+header.set_asm_group_id(value)
+```
+
 ### Get Headers
 
 ```python
