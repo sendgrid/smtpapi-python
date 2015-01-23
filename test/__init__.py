@@ -12,6 +12,8 @@ class TestSMTPAPI(unittest.TestCase):
         "section":{"testSection":"sectionValue"},
         "category":["testCategory"],
         "unique_args":{"testUnique":"uniqueValue"},
+        "send_each_at":[1409348513, 1409348514],
+        "send_at": 1409348515,
         "filters":{"testFilter":{"settings":{"filter":"filterValue"}}}}''')
 
         self.dropsHeader = json.loads('''{
@@ -27,6 +29,9 @@ class TestSMTPAPI(unittest.TestCase):
         header.add_section('testSection', 'sectionValue')
         header.add_category('testCategory')
         header.add_unique_arg('testUnique', 'uniqueValue')
+        header.add_send_each_at(1409348513)
+        header.add_send_each_at(1409348514)
+        header.set_send_at(1409348515)
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.validHeader, json.loads(header.json_string()))
 
@@ -37,6 +42,8 @@ class TestSMTPAPI(unittest.TestCase):
         header.set_sections(json.loads('{"testSection":"sectionValue"}'))
         header.set_categories(["testCategory"])
         header.set_unique_args(json.loads('{"testUnique":"uniqueValue"}'))
+        header.set_send_each_at([1409348513, 1409348514])
+        header.set_send_at(1409348515)
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.validHeader, json.loads(header.json_string()))
 
@@ -47,6 +54,7 @@ class TestSMTPAPI(unittest.TestCase):
         header.set_sections(json.loads('{}'))
         header.set_categories([])
         header.set_unique_args(json.loads('{"testUnique":"uniqueValue"}'))
+        header.set_send_each_at([])
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
