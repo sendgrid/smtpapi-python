@@ -51,6 +51,17 @@ class SMTPAPIHeader(object):
     def set_sections(self, value):
         self.data['section'] = value
 
+    def add_send_each_at(self, time):
+        if 'send_each_at' not in self.data:
+          self.data['send_each_at'] = []
+        self.data['send_each_at'].append(time)
+
+    def set_send_each_at(self, time):
+      self.data['send_each_at'] = time
+
+    def set_send_at(self, time):
+      self.data['send_at'] = time
+
     def add_filter(self, app, setting, val):
         if 'filters' not in self.data:
             self.data['filters'] = {}
