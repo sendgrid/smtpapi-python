@@ -77,6 +77,12 @@ class SMTPAPIHeader(object):
         else:
             self.data['asm_group_id'] = value
 
+    def set_ip_pool(self, value):
+        if bool(value):
+            self.data['ip_pool'] = value
+        else:
+            self.data['ip_pool'] = {}
+
     def json_string(self):
         result = {}
         for key in self.data.keys():
