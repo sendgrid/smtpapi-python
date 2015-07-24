@@ -15,6 +15,7 @@ class TestSMTPAPI(unittest.TestCase):
         "asm_group_id":42,
         "send_each_at":[1409348513, 1409348514],
         "send_at": 1409348515,
+        "ip_pool": "testPool",
         "filters":{"testFilter":{"settings":{"filter":"filterValue"}}}}''')
 
         self.dropsHeader = json.loads('''{
@@ -34,6 +35,7 @@ class TestSMTPAPI(unittest.TestCase):
         header.add_send_each_at(1409348513)
         header.add_send_each_at(1409348514)
         header.set_send_at(1409348515)
+        header.set_ip_pool('testPool')
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.validHeader, json.loads(header.json_string()))
 
@@ -47,6 +49,7 @@ class TestSMTPAPI(unittest.TestCase):
         header.set_asm_group_id(42)
         header.set_send_each_at([1409348513, 1409348514])
         header.set_send_at(1409348515)
+        header.set_ip_pool('testPool')
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.validHeader, json.loads(header.json_string()))
 
@@ -59,6 +62,7 @@ class TestSMTPAPI(unittest.TestCase):
         header.set_unique_args(json.loads('{"testUnique":"uniqueValue"}'))
         header.set_asm_group_id(None)
         header.set_send_each_at([])
+        header.set_ip_pool(None)
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 

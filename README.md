@@ -64,6 +64,12 @@ header.add_filter('filter', 'setting', 'value')
 header.set_asm_group_id(value)
 ```
 
+### [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
+
+```python
+header.set_ip_pool("testPool")
+```
+
 ### [Scheduling Parameters](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
 
 ```python
