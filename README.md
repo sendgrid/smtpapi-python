@@ -78,4 +78,15 @@ header.set_send_at(unix_timestamp)
 header.json_string()
 ```
 
+## Deploying
+
+* Confirm tests pass
+* Bump the version in `setup.py`
+* Update `CHANGELOG.md`
+* Confirm tests pass
+* Commit `Version bump vX.X.X`
+* `python setup.py sdist bdist_wininst upload`
+* Release tag on GitHub `vX.X.X`
+
+
 ## MIT
