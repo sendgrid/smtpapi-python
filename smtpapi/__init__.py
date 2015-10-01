@@ -1,5 +1,12 @@
-import json
+import json, decimal
 
+class _CustomJSONEncoder(json.JSONEncoder):
+
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return float(o)
+        # Provide a fallback to the default encoder if we haven't implemented special support for the object's class
+        return super(_CustomJSONEncoder, self).default(o)
 
 class SMTPAPIHeader(object):
 
@@ -88,4 +95,4 @@ class SMTPAPIHeader(object):
         for key in self.data.keys():
             if self.data[key] != [] and self.data[key] != {}:
                 result[key] = self.data[key]
-        return json.dumps(result)
+        return json.dumps(result, cls=_CustomJSONEncoder)

@@ -1,14 +1,12 @@
-import unittest
-import json
+import unittest, json, decimal
 from smtpapi import SMTPAPIHeader
-
 
 class TestSMTPAPI(unittest.TestCase):
 
     def setUp(self):
         self.validHeader = json.loads('''{"to":["test@email.com",
         "test2@email.com", "test3@email.com"],
-        "sub":{"subKey":["subValue"]},
+        "sub":{"subKey":["subValue"],"decimalKey":[1.23456789]},
         "section":{"testSection":"sectionValue"},
         "category":["testCategory"],
         "unique_args":{"testUnique":"uniqueValue"},
@@ -19,7 +17,7 @@ class TestSMTPAPI(unittest.TestCase):
         "filters":{"testFilter":{"settings":{"filter":"filterValue"}}}}''')
 
         self.dropsHeader = json.loads('''{
-        "sub":{"subKey":["subValue"]},
+        "sub":{"subKey":["subValue"],"decimalKey":[1.23456789]},
         "unique_args":{"testUnique":"uniqueValue"},
         "filters":{"testFilter":{"settings":{"filter":"filterValue"}}}}''')
 
@@ -28,6 +26,7 @@ class TestSMTPAPI(unittest.TestCase):
         header.add_to('test@email.com')
         header.add_to(['test2@email.com', 'test3@email.com'])
         header.add_substitution('subKey', 'subValue')
+        header.add_substitution('decimalKey', decimal.Decimal("1.23456789"))
         header.add_section('testSection', 'sectionValue')
         header.add_category('testCategory')
         header.add_unique_arg('testUnique', 'uniqueValue')
@@ -42,7 +41,10 @@ class TestSMTPAPI(unittest.TestCase):
     def test_set(self):
         header = SMTPAPIHeader()
         header.set_tos(["test@email.com", "test2@email.com", "test3@email.com"])
-        header.set_substitutions(json.loads('{"subKey":["subValue"]}'))
+        header.set_substitutions({
+            "subKey": ["subValue"],
+            "decimalKey": [decimal.Decimal("1.23456789")]
+        })
         header.set_sections(json.loads('{"testSection":"sectionValue"}'))
         header.set_categories(["testCategory"])
         header.set_unique_args(json.loads('{"testUnique":"uniqueValue"}'))
@@ -56,7 +58,10 @@ class TestSMTPAPI(unittest.TestCase):
     def test_drop_empty(self):
         header = SMTPAPIHeader()
         header.set_tos([])
-        header.set_substitutions(json.loads('{"subKey":["subValue"]}'))
+        header.set_substitutions({
+            "subKey": ["subValue"],
+            "decimalKey": [decimal.Decimal("1.23456789")]
+        })
         header.set_sections(json.loads('{}'))
         header.set_categories([])
         header.set_unique_args(json.loads('{"testUnique":"uniqueValue"}'))
