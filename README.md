@@ -1,99 +1,57 @@
-# SMTPAPI for Python
+[![Travis Badge](https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=master)](https://travis-ci.org/sendgrid/smtpapi-python)
 
-This module will let you build SendGrid's SMTP API headers with simplicity.
+**This module helps build SendGrid's SMTP API headers.**
 
-## Installing
+Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html).
+
+# Announcements
+
+All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-python/blob/master/CHANGELOG.md).
+
+# Installation
 
 ```bash
 pip install smtpapi
 ```
 
-## Examples
+## Dependencies
 
-### Create headers
+- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-python))
+
+# Quick Start
 
 ```python
 from smtpapi import SMTPAPIHeader
-
 header = SMTPAPIHeader()
-
-```
-
-### [To](http://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-```python
 header.add_to('email@email.com')
-header.set_tos(['email@email.com'])
+print header.json_string()
 ```
 
-### [Substitutions](http://sendgrid.com/docs/API_Reference/SMTP_API/substitution_tags.html)
+# Usage
 
-```python
-header.add_substitution('key', 'value')
-header.set_substitutions({'key': ['value1', 'value2']})
-```
+- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
+- [Example Code](https://github.com/sendgrid/smtpapi-python/tree/master/examples)
 
-### [Unique Arguments](http://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html)
+## Roadmap
 
-```python
-header.add_unique_arg('key', 'value')
-header.set_unique_args({'key':'value'})
-```
-### [Categories](http://sendgrid.com/docs/API_Reference/SMTP_API/categories.html)
+If you are intersted in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-python/milestones). We would love to hear your feedback.
 
-```python
-header.add_category('category')
-header.set_categories(['category1', 'category2'])
-```
+## How to Contribute
 
-### [Sections](http://sendgrid.com/docs/API_Reference/SMTP_API/section_tags.html)
+We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md) guide for details.
 
-```python
-header.add_section('key', 'section')
-header.set_sections({'key1':'section1', 'key2':'section2'})
-```
+Quick links:
 
-### [Filters](http://sendgrid.com/docs/API_Reference/SMTP_API/apps.html)
+- [Feature Request](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#feature_request)
+- [Bug Reports](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#submit_a_bug_report)
+- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
 
-```python
-header.add_filter('filter', 'setting', 'value')
-```
+# About
 
-### [ASM Group ID](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
+smtpapi-python is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
-```python
-header.set_asm_group_id(value)
-```
+smtpapi-python is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-python are trademarks of SendGrid, Inc.
 
-### [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
-
-```python
-header.set_ip_pool("testPool")
-```
-
-### [Scheduling Parameters](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
-
-```python
-header.add_send_each_at(unix_timestamp)
-header.set_send_each_at([])
-header.set_send_at(unix_timestamp)
-```
-
-### Get Headers
-
-```python
-header.json_string()
-```
-
-## Deploying
-
-* Confirm tests pass
-* Bump the version in `setup.py`
-* Update `CHANGELOG.md`
-* Confirm tests pass
-* Commit `Version bump vX.X.X`
-* `python setup.py sdist bdist_wininst upload`
-* Push changes to GitHub
-* Release tag on GitHub `vX.X.X`
-
-
-## MIT
+![SendGrid Logo]
+(https://assets3.sendgrid.com/mkt/assets/logos_brands/small/sglogo_2015_blue-9c87423c2ff2ff393ebce1ab3bd018a4.png)
