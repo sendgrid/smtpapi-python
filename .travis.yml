@@ -9,7 +9,7 @@ script: python test/__init__.py
 notifications:
   hipchat:
     rooms:
-      secure: ZZZ8REjuy5atAjuQtQfRHGtOn/QMyhCaTHQ9phxOyabmtQ9YLP0qz+iLkCiDy2DVvs+Mq3fGbO+JYEJ8JarLUj8I5jwF+QuxCBRcdz0AOSYI6eyeR6XKtErXplmkRP/F1ZindWjZrf5+ZyJ+Y4mk7/MqjBbypqnt7VeZwapSwag=
+      secure: XbJIz0PtZo+/G6UCnCxLgYDPk7OS8fpyiQwpnfGBr2xW1Z5vhWS+jrR6GndAFJfW9mmgcvq9dJL4bSThITebcZJJtztfuWnGUnONKbfSsFcuEr6o3uGPNmfVwZ9JAL78BUU861A/ykcWe/6lkovlUphkDLa2/l1r7t7TGD75f5k=
     template:
     - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
       Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
