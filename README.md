@@ -10,13 +10,16 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 
 # Installation
 
+## Prerequisites
+
+- Python version 2.6, 2.7, 3.4 or 3.5
+- The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=sendgrid-python)
+
+## Install Package
+
 ```bash
 pip install smtpapi
 ```
-
-## Dependencies
-
-- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-python))
 
 # Quick Start
 
