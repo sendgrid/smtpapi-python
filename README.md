@@ -14,6 +14,14 @@ Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com
 
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-python/blob/master/CHANGELOG.md).
 
+# Table of Contents
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [About](#about)
+- [License](#license)
+
+<a name="installation"></a>
 # Installation
 
 ## Prerequisites
@@ -27,6 +35,7 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 pip install smtpapi
 ```
 
+<a name="quick-start"></a>
 # Quick Start
 
 ```python
@@ -36,6 +45,7 @@ header.add_to('email@email.com')
 print header.json_string()
 ```
 
+<a name="usage"></a>
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
@@ -56,6 +66,7 @@ Quick links:
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
 
+<a name="about"></a>
 # About
 
 smtpapi-python is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
@@ -64,5 +75,6 @@ smtpapi-python is maintained and funded by SendGrid, Inc. The names and logos fo
 
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
+<a name="license"></a>
 # License
 [The MIT License (MIT)](LICENSE.txt)
