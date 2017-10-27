@@ -1,0 +1,11 @@
+*.pyc
+*.egg
+*.egg-info
+dist
+eggs
+build
+sdist
+.Python
+bin/
+include/
+lib/
