@@ -62,7 +62,7 @@ The above example is formatted for readability. Headers must be wrapped to keep 
 While there is a hard limit of 10,000 addresses that can be sent to in a multiple recipient e-mail, it is best to split up large jobs to around 1,000 recipients, to better allow for the processing load to be distributed. Furthermore, if you have a large number of additional substitutions or sections in the headers, it is best to split the send into even smaller groups.
 
 <a name="settings"></a>
-#Settings (Filters)
+# Settings (Filters)
 
 Following are the settings that can be specified in the filters section of the X-SMTPAPI header. All filters and setting names must be lowercase.
 
@@ -71,7 +71,7 @@ Following are the settings that can be specified in the filters section of the X
 * If you enable a disabled setting, our system will not pull your settings for the disabled setting. You will need to define the settings in your X-SMTPAPI header Example: If you have a footer designed but disabled, you can’t just enable it via the API; you need to define the footer in the API call itself.
 * All filter names and setting names must be lowercase.
 
-##Filter: `bcc`
+## Filter: `bcc`
 Sends a BCC copy of the email created in this transaction to the address specified.
 ```python
 {
@@ -89,17 +89,17 @@ Sends a BCC copy of the email created in this transaction to the address specifi
 Sends a BCC copy of the email created in this transaction to the address specified.
 
 <a name="categories"></a>
-#Categories
+# Categories
 **This endpoint allows you to add categories to the X-SMTPAPI header of the emails you send via SendGrid**
 
 By adding categories to the X-SMTPAPI header of the emails that you send via SendGrid you can to track emails based on your own categorization system.
 
 Categories must be in 7bit encoding using the US-ASCII character set, and should be used to group messages together by broad topic. If you need to attach unique data or identifiers to a message, use [Unique Arguments](https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html) instead.
 
-##Example
+## Example
 You can use SendGrid’s SMTP API to add these categories to your email. The following should be added to the email’s header:
 
-###Example Category Header
+### Example Category Header
 ```python
 {
   "category": "Example Category"
@@ -107,7 +107,7 @@ You can use SendGrid’s SMTP API to add these categories to your email. The fol
 ```
 In this example, SendGrid would associate statistics for the email containing that header with the category Example Category.
 
-###Limitations
+### Limitations
 You can assign up to 10 categories per message:
 ```python
 {
@@ -121,7 +121,7 @@ You can assign up to 10 categories per message:
 ```
 
 <a name="schedulling-parameters"></a>
-#Schedulling Parameters
+# Schedulling Parameters
 **This endpoint allows you to send large volumes of email in queued batches or target individual recipients by specifying a custom UNIX timestamp parameter.**
 
 This parameter allows SendGrid to begin processing a customer’s email requests before sending. SendGrid will then queue those messages and release them when the timestamp is exceeded. This technique allows for a more efficient way to distribute large email requests and can improve overall mail delivery time performance. 
@@ -136,7 +136,7 @@ Using the parameters defined below, you can queue batches of emails targeting in
 
 **Note: Using both send_at and send_each_at is not valid and will cause your request to be dropped.**
 
-###Send At
+### Send At
 To schedule a send request for a large batch of emails use the send_at parameter which will send all emails at approximately the same time. send_at is a UNIX timestamp.
 
 Example of **`send_at`** email header
@@ -147,7 +147,7 @@ Example of **`send_at`** email header
 }
 ```
 
-###Send Each At
+### Send Each At
 To schedule a send request for individual recipients; use send_each_at to send emails to each recipient at the specified time. send_each_at is a sequence of UNIX timestamps, provided as an array. There must be one timestamp per email you wish to send.
 
 Example of **`send_each_at`** email header
@@ -168,7 +168,7 @@ Example of **`send_each_at`** email header
 ```
 
 <a name="section-tags"></a>
-#Section Tags
+# Section Tags
 Section tags are similar to substitution tags in how they’re built, but are specific to the message, not the recipient. You have to have a substitution tag value for each recipient, but you can have any number of section tags. Section tags can then contain Substitution tags for the recipient if needed. Section tags have to be contained within a Substitution tag, since SendGrid needs to know which data to populate for the recipient.
 
 The format of the SMTP API section tag has the form:
@@ -182,7 +182,7 @@ The format of the SMTP API section tag has the form:
 ```
 
 <a name="subtitution-tags"></a>
-#Subtitution Tags
+# Subtitution Tags
 
 **This endpoint allows you to easily generate dynamic content for each recipient on your list.**
 
@@ -196,9 +196,9 @@ A customer specific ID can replace -customerID- in the URL within your email
 `<a href="http://example.com/customerOffer?id=-customerID-">Claim your offer!</a>`
 
 <a name="suppression-groups"></a>
-#Suppression Groups
+# Suppression Groups
 
-##Defining an Unsubscribe Group When Sending
+## Defining an Unsubscribe Group When Sending
 
 **This endpoint allows you to specify an unsubscribe group for an email depends on how you will be sending that email.**
 
@@ -226,11 +226,11 @@ You can specify up to 25 groups to display.
 }
 ```
 
-##Groups
+## Groups
 You can find your group IDs by looking at the Group ID column in the Unsubscribe Groups UI, or by calling the [GET method](https://sendgrid.com/docs/API_Reference/Web_API_v3/Suppression_Management/groups.html#-GET) of the groups resource.
 
 <a name="unique-arguments"></a>
-#Unique Arguments
+# Unique Arguments
 
 The SMTP API JSON string allows you to attach an unlimited number of unique arguments to your email up to 10,000 bytes. The arguments are used only for tracking. They can be retrieved through the Event API or the Email Activity page.
 
