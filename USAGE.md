@@ -195,6 +195,80 @@ These tags can also be used in more complex scenarios. For example, you could us
 A customer specific ID can replace -customerID- in the URL within your email
 `<a href="http://example.com/customerOffer?id=-customerID-">Claim your offer!</a>`
 
+## Substitution Tag Example
+
+Email HTML content:
+```
+<html>
+  <head></head>
+  <body>
+    <p>Hello -name-,<br>
+       Thank you for your interest in our products. I have set up an appointment
+             to call you at -time- EST to discuss your needs in more detail. If you would
+             like to reschedule this call please visit the following link:
+             <a href="http://example.com/reschedule?id=-customerID-">reschedule</a>
+
+                Regards,
+
+                -salesContact-
+                -contactPhoneNumber-<br>
+    </p>
+  </body>
+</html>
+```
+
+An accompanying SMTP API JSON header might look something like this:
+```
+{
+  "to": [
+    "john.doe@gmail.com",
+    "jane.doe@hotmail.com"
+  ],
+  "sub": {
+    "-name-": [
+      "John",
+      "Jane"
+    ],
+    "-customerID-": [
+      "1234",
+      "5678"
+    ],
+    "-salesContact-": [
+      "Jared",
+      "Ben"
+    ],
+    "-contactPhoneNumber-": [
+      "555.555.5555",
+      "777.777.7777"
+    ],
+    "-time-": [
+      "3:00pm",
+      "5:15pm"
+    ]
+  }
+}
+```
+
+The resulting email for John would look like this:
+```
+<html>
+  <head></head>
+  <body>
+    <p>Hello John,<br>
+       Thank you for your interest in our products. I have set up an appointment
+             to call you at 3:00pm EST to discuss your needs in more detail. If you would
+             like to reschedule this call please visit the following link:
+             <a href="http://example.com/reschedule?id=1234">reschedule</a>
+
+                Regards,
+
+                Jared
+                555.555.5555<br>
+    </p>
+  </body>
+</html>
+```
+
 <a name="suppression-groups"></a>
 # Suppression Groups
 
@@ -250,9 +324,10 @@ These arguments can be added using a JSON string like this:
 
 These arguments can then be seen in posts from the SendGrid Event Webhook. The contents of one of these POST requests would look something like this:
 
-Example Webhook Post Data
+## Example Webhook Post Data
 
-```{
+```
+{
   "sg_message_id": "145cea24eb8.1c420.57425.filter-132.3382.5368192A3.0",
   "New Argument 1": "New Value 1",
   "event": "processed",
@@ -269,7 +344,8 @@ Example Webhook Post Data
 Unique Arguments will also be shown in the Email Activity tab of your account.
 
 To apply different unique arguments to individual emails, you may use substitution tags. An example of this would look like:
-```{
+```
+{
   "sub": {
     "-account_number-": [
       "314159",
