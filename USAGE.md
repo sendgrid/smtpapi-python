@@ -1,5 +1,36 @@
 # Usage
 
+# INITIALIZATION
+
+## Simple Way
+
+```python
+from smtpapi import SMTPAPIHeader
+
+header = SMTPAPIHeader()
+header.set_tos(['test1@example.com', 'test2@example.com'])
+print(header.json_string())
+```
+
+or
+
+## With Several SMTP-API Methods
+
+```python
+
+from smtpapi import SMTPAPIHeader
+
+header = SMTPAPIHeader()
+header.set_tos(['test1@example.com', 'test2@example.com'])
+header.set_categories(['category1', 'category2'])
+header.set_send_at(int(time.time())
+header.set_sections({'key1':'section1', 'key2':'section2'})
+header.set_substitutions({'key': ['value1', 'value2']})
+header.set_asm_group_id('value')
+header.set_unique_args({'key':'value'})
+print(header.json_string())
+```
+
 # Table of Contents
 
 * [Using the SMTP API](#use-smtp-api)

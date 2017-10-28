@@ -45,7 +45,7 @@ pip install smtpapi
 from smtpapi import SMTPAPIHeader
 header = SMTPAPIHeader()
 header.add_to('email@email.com')
-print header.json_string()
+print(header.json_string())
 ```
 
 <a name="usage"></a>
