@@ -1,5 +1,6 @@
-import unittest, json, decimal
+import unittest, json, decimal, os
 from smtpapi import SMTPAPIHeader
+
 
 class TestSMTPAPI(unittest.TestCase):
 
@@ -70,6 +71,41 @@ class TestSMTPAPI(unittest.TestCase):
         header.set_ip_pool(None)
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
+
+
+class TestRepository(unittest.TestCase):
+
+    def setUp(self):
+
+        self.required_files = [
+            ['./Docker', './docker/Docker'],
+            ['./docker-compose.yml', './docker/docker-compose.yml'],
+            './.codeclimate.yml',
+            './.env_sample',
+            './.github/ISSUE_TEMPLATE',
+            './.github/PULL_REQUEST_TEMPLATE',
+            './.gitignore',
+            './.travis.yml',
+            './CHANGELOG.md',
+            './CODE_OF_CONDUCT.md',
+            './CONTRIBUTING.md',
+            './LICENSE.md',
+            './README.md',
+            './TROUBLESHOOTING.md',
+            './USAGE.md',
+            './USE_CASES.md',
+        ]
+
+        self.file_not_found_message = 'File "{}" does not exist in repo!'
+
+    def test_repository_files_exists(self):
+
+        for file_path in self.required_files:
+            if isinstance(file_path, list):
+                self.assertTrue(any(os.path.exists(f) for f in file_path),
+                                msg=self.file_not_found_message.format('" or "'.join(file_path)))
+            else:
+                self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
 
 
 if __name__ == '__main__':
