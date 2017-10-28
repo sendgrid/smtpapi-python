@@ -102,6 +102,7 @@ class TestRepository(unittest.TestCase):
 
         for file_path in self.required_files:
             if isinstance(file_path, list):
+                # multiple file paths: assert that any one of the files exists
                 self.assertTrue(any(os.path.exists(f) for f in file_path),
                                 msg=self.file_not_found_message.format('" or "'.join(file_path)))
             else:
