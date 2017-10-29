@@ -96,7 +96,7 @@ class TestRepository(unittest.TestCase):
             './USE_CASES.md',
         ]
 
-        self.file_not_found_message = 'File "{}" does not exist in repo!'
+        self.file_not_found_message = 'File "{0}" does not exist in repo!'
 
     def test_repository_files_exists(self):
 
