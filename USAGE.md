@@ -1,4 +1,4 @@
-# Usage
+This documentation is based on our [API_Reference](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 
 # INITIALIZATION
 
