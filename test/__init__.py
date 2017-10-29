@@ -1,4 +1,5 @@
 import unittest, json, decimal, os
+import datetime
 from smtpapi import SMTPAPIHeader
 
 
@@ -72,6 +73,15 @@ class TestSMTPAPI(unittest.TestCase):
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
+    def test_license_year(self):
+        LICENSE_FILE = 'LICENSE.txt'
+        copyright_line = ''
+        with open(LICENSE_FILE, 'r') as f:
+            for line in f:
+                if line.startswith('Copyright'):
+                    copyright_line = line.strip()
+                    break
+        self.assertEqual('Copyright (c) 2013-%s SendGrid, Inc.' % datetime.datetime.now().year, copyright_line)
 
 class TestRepository(unittest.TestCase):
 
