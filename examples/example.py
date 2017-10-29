@@ -1,4 +1,5 @@
-from __future__ import print_function
+# Python 2/3 compatible codebase
+from __future__ import absolute_import, division, print_function
 
 import time
 
