@@ -9,3 +9,4 @@ sdist
 bin/
 include/
 lib/
+.env

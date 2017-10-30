@@ -39,6 +39,21 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 pip install smtpapi
 ```
 
+## Setup Environment Variables
+
+Update the development environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys), for example:
+
+
+```bash
+cp .env_sample .env
+```
+In `.env` set `SENDGRID_API_KEY` to your own API key.
+
+You can add your environment variables to your environment by sourcing the file:
+
+```source .env```
+
+
 <a name="quick-start"></a>
 # Quick Start
 
