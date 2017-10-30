@@ -15,3 +15,18 @@ notifications:
       Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
       <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
     format: html
+sudo: false
+
+language: python
+
+python:
+  - 2.7
+
+install:
+  - pip install codecov
+
+script:
+  - coverage run tests.py
+
+after_success:
+  - codecov
