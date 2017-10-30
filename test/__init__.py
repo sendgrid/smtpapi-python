@@ -1,5 +1,8 @@
-import unittest, json, decimal
+import unittest
+import json
+import decimal
 from smtpapi import SMTPAPIHeader
+
 
 class TestSMTPAPI(unittest.TestCase):
 
@@ -40,7 +43,8 @@ class TestSMTPAPI(unittest.TestCase):
 
     def test_set(self):
         header = SMTPAPIHeader()
-        header.set_tos(["test@email.com", "test2@email.com", "test3@email.com"])
+        header.set_tos(
+            ["test@email.com", "test2@email.com", "test3@email.com"])
         header.set_substitutions({
             "subKey": ["subValue"],
             "decimalKey": [decimal.Decimal("1.23456789")]
