@@ -48,6 +48,9 @@ cp .env_sample .env
 ```
 In `.env` set `SENDGRID_API_KEY` to your own API key.
 
+You can add your environment variables to your environment by sourcing the file:
+
+```source .env```
 
 
 <a name="quick-start"></a>
