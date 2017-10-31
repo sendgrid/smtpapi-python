@@ -90,7 +90,7 @@ You can add as many of the SMTP API methods as you want to a single large JSON s
 The above example is formatted for readability. Headers must be wrapped to keep the line length under 72. By RFC 821 no line can be longer than 1,000, so if you are going to generate this string yourself it is a good idea to make sure that you wrap it.
 
 ## Requirements and Limitations
-While there is a hard limit of 10,000 addresses that can be sent to in a multiple recipient e-mail, it is best to split up large jobs to around 1,000 recipients, to better allow for the processing load to be distributed. Furthermore, if you have a large number of additional substitutions or sections in the headers, it is best to split the send into even smaller groups.
+While there is a hard limit of 10,000 addresses that can be sent to in a multiple recipient e-mail, it is best to split up large jobs to around 1,000 recipients, to better allow for the processing load to be distributed. Furthermore, if you have numerous additional substitutions or sections in the headers, it is best to split the group into even smaller groups.
 
 <a name="settings"></a>
 # Settings (Filters)
@@ -332,7 +332,7 @@ You can specify up to 25 groups to display.
 ```
 
 ## Groups
-You can find your group IDs by looking at the Group ID column in the Unsubscribe Groups UI, or by calling the [GET method](https://sendgrid.com/docs/API_Reference/Web_API_v3/Suppression_Management/groups.html#-GET) of the groups resource.
+You can find your group IDs by looking at the Group ID column in the Unsubscribe Groups UI, or by calling the [GET method](https://sendgrid.com/docs/API_Reference/Web_API_v3/Suppression_Management/groups.html#-GET) of the group's resource.
 
 <a name="unique-arguments"></a>
 # Unique Arguments
