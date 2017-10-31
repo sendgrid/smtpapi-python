@@ -1,11 +1,18 @@
 language: python
+sudo: false
 python:
 - '2.6'
 - '2.7'
 - '3.4'
 - '3.5'
-install: python setup.py install
-script: python test/__init__.py
+install:
+- python setup.py install
+- pip install codecov
+script:
+- python test/__init__.py
+- coverage run tests.py
+after_success:
+- codecov
 notifications:
   hipchat:
     rooms:
