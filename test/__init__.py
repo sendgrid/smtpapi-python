@@ -78,7 +78,7 @@ class TestRepository(unittest.TestCase):
     def setUp(self):
 
         self.required_files = [
-            ['./Docker', './docker/Docker'],
+            ['./Dockerfile', './docker/Dockerfile'],
             ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.codeclimate.yml',
             './.env_sample',
