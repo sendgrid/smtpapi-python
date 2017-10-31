@@ -34,10 +34,13 @@ class SMTPAPIHeader(object):
     def set_substitutions(self, subs):
         self.data['sub'] = subs
 
+    def add(self,key,value,arg):
+        if arg not in self.data:
+            self.data[arg] = {}
+        self.data[arg][key] = value
+        
     def add_unique_arg(self, key, value):
-        if 'unique_args' not in self.data:
-            self.data['unique_args'] = {}
-        self.data['unique_args'][key] = value
+        add(self,key,value,'unique_arg')
 
     def set_unique_args(self, value):
         self.data['unique_args'] = value
@@ -50,10 +53,8 @@ class SMTPAPIHeader(object):
     def set_categories(self, category):
         self.data['category'] = category
 
-    def add_section(self, key, section):
-        if 'section' not in self.data:
-            self.data['section'] = {}
-        self.data['section'][key] = section
+    def add_section(self, key, value):
+        add(self,key,value,'section')
 
     def set_sections(self, value):
         self.data['section'] = value
