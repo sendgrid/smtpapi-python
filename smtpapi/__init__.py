@@ -34,34 +34,37 @@ class SMTPAPIHeader(object):
     def set_substitutions(self, subs):
         self.data['sub'] = subs
 
+        
+    def add_attr(self, key, value, attr):
+        if attr not in self.data:
+            self.data[attr] = {}
+        self.data[attr][key] = value
+    
     def add_unique_arg(self, key, value):
-        if 'unique_args' not in self.data:
-            self.data['unique_args'] = {}
-        self.data['unique_args'][key] = value
+        add_attr(self, key, value, 'unique_args')
 
     def set_unique_args(self, value):
         self.data['unique_args'] = value
 
+    def append_attr(self, value, attr):
+        if attr not in self.data:
+            self.data[attr] = []
+        self.data[attr].append(value)
+    
     def add_category(self, category):
-        if 'category' not in self.data:
-            self.data['category'] = []
-        self.data['category'].append(category)
+        append_attr(self, category, 'category')
 
     def set_categories(self, category):
         self.data['category'] = category
 
     def add_section(self, key, section):
-        if 'section' not in self.data:
-            self.data['section'] = {}
-        self.data['section'][key] = section
+        add_attr(self, key, section, 'section')
 
     def set_sections(self, value):
         self.data['section'] = value
 
     def add_send_each_at(self, time):
-        if 'send_each_at' not in self.data:
-          self.data['send_each_at'] = []
-        self.data['send_each_at'].append(time)
+        append_attr(self, time, 'send_each_at')
 
     def set_send_each_at(self, time):
       self.data['send_each_at'] = time
