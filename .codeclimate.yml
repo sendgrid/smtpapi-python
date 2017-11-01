@@ -1,0 +1,27 @@
+---
+# Python Engines
+engines: 
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - python:
+  fixme:
+    enabled: true
+  pep8:
+    enabled: true         
+  radon: 
+    enabled: true
+  markdownlint:
+    enabled: true          
+
+# Ratings
+ratings:
+  paths:
+    - "**.py"    # default for enable Radon analysis
+    - "**.md"
+    
+# List the files or directories excluded from analysis.
+exclude_paths:
+- dist/**
+- build/**    

@@ -1,5 +1,13 @@
-import unittest, json, decimal, os
+import json
+import decimal
+import os
+
 from smtpapi import SMTPAPIHeader
+
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
 
 class TestSMTPAPI(unittest.TestCase):
@@ -41,7 +49,8 @@ class TestSMTPAPI(unittest.TestCase):
 
     def test_set(self):
         header = SMTPAPIHeader()
-        header.set_tos(["test@email.com", "test2@email.com", "test3@email.com"])
+        header.set_tos(
+            ["test@email.com", "test2@email.com", "test3@email.com"])
         header.set_substitutions({
             "subKey": ["subValue"],
             "decimalKey": [decimal.Decimal("1.23456789")]
@@ -78,8 +87,10 @@ class TestRepository(unittest.TestCase):
     def setUp(self):
 
         self.required_files = [
-            ['./Dockerfile', './docker/Dockerfile'],
-            ['./docker-compose.yml', './docker/docker-compose.yml'],
+            './Dockerfile',
+            #'./docker/Dockerfile',
+            #'./docker-compose.yml',
+            #'./docker/docker-compose.yml',
             './.codeclimate.yml',
             './.env_sample',
             './.github/ISSUE_TEMPLATE',
@@ -89,11 +100,12 @@ class TestRepository(unittest.TestCase):
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            ['./LICENSE.md', './License.txt'],
+            #'./LICENSE.md',
+            './LICENSE.txt',
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
-            './USE_CASES.md',
+            #'./USE_CASES.md',
         ]
 
         self.file_not_found_message = 'File "{0}" does not exist in repo!'
@@ -106,7 +118,8 @@ class TestRepository(unittest.TestCase):
                 self.assertTrue(any(os.path.exists(f) for f in file_path),
                                 msg=self.file_not_found_message.format('" or "'.join(file_path)))
             else:
-                self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
+                self.assertTrue(os.path.exists(
+                    file_path), msg=self.file_not_found_message.format(file_path))
 
 
 if __name__ == '__main__':
