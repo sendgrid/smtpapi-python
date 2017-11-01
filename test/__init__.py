@@ -89,7 +89,7 @@ class TestRepository(unittest.TestCase):
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            './LICENSE.md',
+            ['./LICENSE.md', './License.txt'],
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
