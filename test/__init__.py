@@ -80,7 +80,7 @@ class TestSMTPAPI(unittest.TestCase):
 class TestFilesExist(unittest.TestCase):
     def setUp(self):
         self.files_required = [
-            ['./Docker', 'docker/Docker'],
+            ['./Dockerfile', 'docker/Dockerfile'],
             ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.env_sample',
             './.gitignore',
@@ -90,7 +90,7 @@ class TestFilesExist(unittest.TestCase):
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
             './.github/ISSUE_TEMPLATE',
-            './LICENSE.md',
+            ['./LICENSE.md', '.LICENSE.txt'],
             './.github/PULL_REQUEST_TEMPLATE',
             './README.md',
             './TROUBLESHOOTING.md',
