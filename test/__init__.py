@@ -1,6 +1,7 @@
 import unittest
 import json
 import decimal
+import os
 
 from smtpapi import SMTPAPIHeader
 
