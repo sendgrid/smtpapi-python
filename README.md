@@ -21,6 +21,7 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
+- [Local set up](#local_setup)
 - [About](#about)
 - [License](#license)
 
@@ -38,6 +39,21 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 pip install smtpapi
 ```
 
+## Setup Environment Variables
+
+Update the development environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys), for example:
+
+
+```bash
+cp .env_sample .env
+```
+In `.env` set `SENDGRID_API_KEY` to your own API key.
+
+You can add your environment variables to your environment by sourcing the file:
+
+```source .env```
+
+
 <a name="quick-start"></a>
 # Quick Start
 
@@ -45,7 +61,7 @@ pip install smtpapi
 from smtpapi import SMTPAPIHeader
 header = SMTPAPIHeader()
 header.add_to('email@email.com')
-print header.json_string()
+print(header.json_string())
 ```
 
 <a name="usage"></a>
@@ -70,6 +86,18 @@ Quick links:
 - [Bug Reports](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#submit-a-bug-report)
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
+
+<a name="local_setup"></a>
+
+# Local Setup of the project
+
+The simplest local development workflow is by using docker.
+
+> Steps
+
+1. Install Docker
+2. Run `docker-compose build` (This builds the container)
+3. Run `docker-compose up` (This runs tests by default)
 
 <a name="about"></a>
 # About

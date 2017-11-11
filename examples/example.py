@@ -1,3 +1,6 @@
+# Python 2/3 compatible codebase
+from __future__ import absolute_import, division, print_function
+
 import time
 
 if __name__ == '__main__' and __package__ is None:
@@ -42,4 +45,4 @@ header.set_ip_pool("testPool")
 #header.set_send_each_at([]) # must be a unix timestamp
 header.set_send_at(int(time.time())) # must be a unix timestamp
 
-print header.json_string()
+print(header.json_string())

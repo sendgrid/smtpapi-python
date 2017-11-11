@@ -77,37 +77,40 @@ class TestSMTPAPI(unittest.TestCase):
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
 
-class TestFilesExist(unittest.TestCase):
+class TestRepository(unittest.TestCase):
+
     def setUp(self):
-        self.files_required = [
-            ['./Dockerfile', 'docker/Dockerfile'],
+
+        self.required_files = [
+            ['./Dockerfile', './docker/Dockerfile'],
             ['./docker-compose.yml', './docker/docker-compose.yml'],
+            './.codeclimate.yml',
             './.env_sample',
+            './.github/ISSUE_TEMPLATE',
+            './.github/PULL_REQUEST_TEMPLATE',
             './.gitignore',
             './.travis.yml',
-            './.codeclimate.yml',
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            './.github/ISSUE_TEMPLATE',
-            ['./LICENSE.md', '.LICENSE.txt'],
-            './.github/PULL_REQUEST_TEMPLATE',
+            ['./LICENSE.md', './License.txt'],
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
-            './USE_CASES.md'
+            './USE_CASES.md',
         ]
-        self.file_missing_msg = '"{}" missing in repo'
 
-    def test_file_exists(self):
+        self.file_not_found_message = 'File "{0}" does not exist in repo!'
 
-        for file in self.files_required:
-            if isinstance(file, list):
-                self.assertTrue(any(os.path.exists(f) for f in file),
-                                msg=self.file_missing_msg.format('" or "'.join(file)))
+    def test_repository_files_exists(self):
+
+        for file_path in self.required_files:
+            if isinstance(file_path, list):
+                # multiple file paths: assert that any one of the files exists
+                self.assertTrue(any(os.path.exists(f) for f in file_path),
+                                msg=self.file_not_found_message.format('" or "'.join(file_path)))
             else:
-                self.assertTrue(os.path.exists(file), msg=self.file_missing_msg.format(file))
-
+                self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
 
 if __name__ == '__main__':
     unittest.main()
