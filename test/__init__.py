@@ -1,4 +1,8 @@
-import unittest, json, decimal, os
+import decimal
+import json
+import os
+import unittest
+
 from smtpapi import SMTPAPIHeader
 
 
@@ -107,7 +111,6 @@ class TestRepository(unittest.TestCase):
                                 msg=self.file_not_found_message.format('" or "'.join(file_path)))
             else:
                 self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
-
 
 if __name__ == '__main__':
     unittest.main()
