@@ -2,6 +2,7 @@ import decimal
 import json
 import os
 import unittest
+import datetime
 
 from smtpapi import SMTPAPIHeader
 
@@ -102,7 +103,7 @@ class TestRepository(unittest.TestCase):
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            ['./LICENSE.md', './License.txt'],
+            ['./LICENSE.md', './LICENSE.txt'],
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
