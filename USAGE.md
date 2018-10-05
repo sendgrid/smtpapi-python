@@ -36,7 +36,7 @@ print(header.json_string())
 * [Using the SMTP API](#use-smtp-api)
 * [Settings](#settings)
 * [Categories](#categories)
-* [Schedulling Parameters](#schedulling-parameters)
+* [Scheduling Parameters](#scheduling-parameters)
 * [Section Tags](#section-tags)
 * [Subtitution Tags](#subtitution-tags)
 * [Suppression Groups](#suppression-groups)
@@ -151,8 +151,8 @@ You can assign up to 10 categories per message:
 }
 ```
 
-<a name="schedulling-parameters"></a>
-# Schedulling Parameters
+<a name="scheduling-parameters"></a>
+# Scheduling Parameters
 **This endpoint allows you to send large volumes of email in queued batches or target individual recipients by specifying a custom UNIX timestamp parameter.**
 
 This parameter allows SendGrid to begin processing a customer’s email requests before sending. SendGrid will then queue those messages and release them when the timestamp is exceeded. This technique allows for a more efficient way to distribute large email requests and can improve overall mail delivery time performance. 
