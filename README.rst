@@ -12,7 +12,7 @@ Announcements
 =============
 **The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
-All updates to this module is documented in our `CHANGELOG`_.
+All the updates to this module are documented in our `CHANGELOG`_.
 
 Table of Contents
 =================
@@ -85,7 +85,7 @@ We would love to hear your feedback.
 How to Contribute
 =================
 
-We encourage contribution to our projects, please see our `CONTRIBUTING`_ guide for details.
+We encourage contribution to our projects, please see our `CONTRIBUTING`_ guide for more details.
 
 Quick links:
 
