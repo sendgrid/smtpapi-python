@@ -1,4 +1,11 @@
-import json, decimal
+import decimal
+import json
+import os
+
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+if os.path.isfile(os.path.join(dir_path, 'VERSION.txt')):
+    __version__ = open(os.path.join(dir_path, 'VERSION.txt')).read().strip()
 
 class _CustomJSONEncoder(json.JSONEncoder):
 
