@@ -67,9 +67,6 @@ class ProjectTests(unittest.TestCase):
     def test_usage(self):
         self.assertEqual(True, os.path.isfile('./USAGE.md'))
 
-    # ./USE_CASES.md
-    def test_use_cases(self):
-        self.assertEqual(True, os.path.isfile('./USE_CASES.md'))
 
 if __name__ == '__main__':
-unittest.main()
+    unittest.main()

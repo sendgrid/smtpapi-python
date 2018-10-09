@@ -107,7 +107,6 @@ class TestRepository(unittest.TestCase):
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
-            './USE_CASES.md',
         ]
 
         self.file_not_found_message = 'File "{0}" does not exist in repo!'
