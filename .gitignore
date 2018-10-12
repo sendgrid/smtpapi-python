@@ -10,3 +10,4 @@ bin/
 include/
 lib/
 .env
+smtpapi/VERSION.txt

@@ -55,9 +55,9 @@ class ProjectTests(unittest.TestCase):
     def test_pr_template(self):
         self.assertEqual(True, os.path.isfile('./.github/PULL_REQUEST_TEMPLATE'))
 
-    # ./README.md
+    # ./README.rst
     def test_readme(self):
-        self.assertEqual(True, os.path.isfile('./README.md'))
+        self.assertEqual(True, os.path.isfile('./README.rst'))
 
     # ./TROUBLESHOOTING.md
     def test_troubleshooting(self):
@@ -67,9 +67,9 @@ class ProjectTests(unittest.TestCase):
     def test_usage(self):
         self.assertEqual(True, os.path.isfile('./USAGE.md'))
 
-    # ./USE_CASES.md
+    # ./VERSION.txt
     def test_use_cases(self):
-        self.assertEqual(True, os.path.isfile('./USE_CASES.md'))
+        self.assertEqual(True, os.path.isfile('./VERSION.txt'))
 
 if __name__ == '__main__':
-unittest.main()
+    unittest.main()
