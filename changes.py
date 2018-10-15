@@ -22,6 +22,7 @@ TAG_PATTERN = re.compile(
 # PR Type terms
 FIX_TERMS = ['fix', 'change', 'update']
 
+
 # Helper functions
 def generate_pr_link(pr_num):
     """
@@ -31,11 +32,13 @@ def generate_pr_link(pr_num):
         '[PR #{0}](https://github.com/sendgrid/smtpapi-python/pulls/{0})'
     ).format(pr_num)
 
+
 def generate_user_link(user):
     """
     Returns a markdown link to a user
     """
     return '[@{0}](https://github.com/{0})'.format(user)
+
 
 # Get latest tag
 command = ['git', 'tag', '--format=%(refname) %(creatordate)']
@@ -114,9 +117,8 @@ for commit in merge_commits:
 # Now we need to write out the CHANGELOG again
 with open('CHANGELOG.md', 'w') as f:
     # Write out the header lines first
-    f.write('# Change Log\n')
-    f.write('All notable changes to this project will be documented in this file.\n')
-    f.write('\n')
+    for i in range(0, 3):
+        f.write(old_text[i])
 
     # Create and write out the new version information
     latest_release_date_string = latest_release_date.strftime('%Y-%m-%d')
