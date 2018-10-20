@@ -137,7 +137,7 @@ License
    :target: https://dx.sendgrid.com/newsletter/python
 .. |Twitter Follow| image:: https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow
    :target: https://twitter.com/sendgrid
-.. |Codecov branch| image:: https://img.shields.io/codecov/c/github/sendgrid/smtpapi-python/master.svg?style=flat-square&label=Codecov+Coverage
+.. |Codecov branch| image:: https://img.shields.io/codecov/c/github/sendgrid/smtpapi-python/master.svg?style=rounded&label=Codecov+Coverage
    :target: https://codecov.io/gh/sendgrid/smtpapi-python
 .. |Python Versions| image:: https://img.shields.io/pypi/pyversions/smtpapi.svg
    :target: https://pypi.org/project/smtpapi/
