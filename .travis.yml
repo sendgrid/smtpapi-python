@@ -6,10 +6,11 @@ python:
  - '3.5'
 install:
  - python setup.py install
- - pip install codecov
+ - pip install codecov flake8
 script:
  - python test/__init__.py
  - coverage run test/__init__.py
+ - flake8 --statistics --count
 after_success:
  - codecov
 notifications:
