@@ -12,7 +12,8 @@ class _CustomJSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, decimal.Decimal):
             return float(o)
-        # Provide a fallback to the default encoder if we haven't implemented special support for the object's class
+        # Provide a fallback to the default encoder if we haven't implemented
+        # special support for the object's class
         return super(_CustomJSONEncoder, self).default(o)
 
 

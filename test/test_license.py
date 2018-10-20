@@ -12,6 +12,7 @@ class LicenseTests(unittest.TestCase):
             copyright_line = f.readline().rstrip()
 
         self.assertEqual(
-            "Copyright (c) 2012-%s SendGrid, Inc." % datetime.datetime.now().year,
+            "Copyright (c) 2012-%s SendGrid, Inc."
+            % datetime.datetime.now().year,
             copyright_line,
         )
