@@ -5,7 +5,6 @@ except ImportError:
 
 import datetime
 
-host = "http://localhost:4010"
 
 
 def test_license_year(self):
