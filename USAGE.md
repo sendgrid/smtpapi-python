@@ -38,7 +38,7 @@ print(header.json_string())
 * [Categories](#categories)
 * [Schedulling Parameters](#schedulling-parameters)
 * [Section Tags](#section-tags)
-* [Subtitution Tags](#subtitution-tags)
+* [Substitution Tags](#substitution-tags)
 * [Suppression Groups](#suppression-groups)
 * [Unique Arguments](#unique-arguments)
 
@@ -213,7 +213,7 @@ The format of the SMTP API section tag has the form:
 ```
 
 <a name="subtitution-tags"></a>
-# Subtitution Tags
+# Substitution Tags
 
 **This endpoint allows you to easily generate dynamic content for each recipient on your list.**
 
