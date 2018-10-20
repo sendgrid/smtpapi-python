@@ -1,2 +1,2 @@
 [flake8]
-exclude = build
+exclude = build,.svn,CVS,.bzr,.hg,.git,__pycache__,.tox,.eggs,*.egg
