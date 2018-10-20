@@ -10,11 +10,11 @@ class ProjectTests(unittest.TestCase):
 
     # ./Docker or docker/Docker
     def test_docker_dir(self):
-        self.assertEqual(True, os.path.isdir("./Dockerfile") || os.path.isdir("./docker/Dockerfile"))
+        self.assertEqual(True, os.path.isdir("./Dockerfile") or os.path.isdir("./docker/Dockerfile"))
 
     # ./docker-compose.yml or ./docker/docker-compose.yml
     def test_docker_compose(self):
-        self.assertEqual(True, os.path.isfile('./docker-compose.yml') || os.path.isfile('./docker/docker-compose.yml'))
+        self.assertEqual(True, os.path.isfile('./docker-compose.yml') or os.path.isfile('./docker/docker-compose.yml'))
 
     # ./.env_sample
     def test_env(self):
@@ -50,7 +50,7 @@ class ProjectTests(unittest.TestCase):
 
     # ./LICENSE.md
     def test_license(self):
-        self.assertEqual(True, os.path.isfile('./LICENSE.md') || os.path.isfile('./LICENSE.txt'))
+        self.assertEqual(True, os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt'))
 
     # ./.github/PULL_REQUEST_TEMPLATE
     def test_pr_template(self):
