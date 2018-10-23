@@ -1,13 +1,14 @@
 # Python 2/3 compatible codebase
 from __future__ import absolute_import, division, print_function
+from smtpapi import SMTPAPIHeader
 
 import time
 
-from os import sys, path
-from smtpapi import SMTPAPIHeader
-
 if __name__ == '__main__' and __package__ is None:
+    from os import sys, path
+
     sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+    from smtpapi import SMTPAPIHeader
 
 header = SMTPAPIHeader()
 
@@ -41,8 +42,8 @@ header.set_asm_group_id('value')
 header.set_ip_pool("testPool")
 
 # [Scheduling Parameters](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
-# header.add_send_each_at(unix_timestamp) # must be a unix timestamp
-# header.set_send_each_at([]) # must be a unix timestamp
+# header.add_send_each_at(unix_timestamp) #  must be a unix timestamp
+# header.set_send_each_at([]) #  must be a unix timestamp
 header.set_send_at(int(time.time()))  # must be a unix timestamp
 
 print(header.json_string())
