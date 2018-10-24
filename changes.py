@@ -130,7 +130,7 @@ with open('CHANGELOG.md', 'w') as f:
     # Add the stuff that was added
     f.write('### Added\n')
     for commit in added:
-        f.write('- {}: {}{} Big thanks to {} for the PR!\n'.format(
+        f.write('- {}: {}{} (via {})\n'.format(
             generate_pr_link(commit['number']),
             commit['title'],
             '.' if commit['title'][-1] != '.' else '',
@@ -140,7 +140,7 @@ with open('CHANGELOG.md', 'w') as f:
     # Add the fixes
     f.write('### Fixes\n')
     for commit in fixes:
-        f.write('- {}: {}{} Big thanks to {} for the PR!\n'.format(
+        f.write('- {}: {}{} (via {})\n'.format(
             generate_pr_link(commit['number']),
             commit['title'],
             '.' if commit['title'][-1] != '.' else '',
