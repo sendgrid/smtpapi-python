@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 Small python script that, when run, will update the CHANGELOG with information
 about all merged pull requests since the previous release.
