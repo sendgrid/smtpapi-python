@@ -9,67 +9,67 @@ class ProjectTests(unittest.TestCase):
 
     # ./Docker or docker/Docker
     def test_docker_dir(self):
-        self.assertEqual(True, os.path.isdir("./Dockerfile") or os.path.isdir("./docker/Dockerfile"))
+        self.assertTrue(os.path.isdir("./Dockerfile") or os.path.isdir("./docker/Dockerfile"))
 
     # ./docker-compose.yml or ./docker/docker-compose.yml
     def test_docker_compose(self):
-        self.assertEqual(True, os.path.isfile('./docker-compose.yml') or os.path.isfile('./docker/docker-compose.yml'))
+        self.assertTrue(os.path.isfile('./docker-compose.yml') or os.path.isfile('./docker/docker-compose.yml'))
 
     # ./.env_sample
     def test_env(self):
-        self.assertEqual(True, os.path.isfile('./env_sample'))
+        self.assertTrue(os.path.isfile('./env_sample'))
 
     # ./.gitignore
     def test_gitignore(self):
-        self.assertEqual(True, os.path.isfile('./.gitignore'))
+        self.assertTrue(os.path.isfile('./.gitignore'))
 
     # ./.travis.yml
     def test_travis(self):
-        self.assertEqual(True, os.path.isfile('./.travis.yml'))
+        self.assertTrue(os.path.isfile('./.travis.yml'))
 
     # ./.codeclimate.yml
     def test_codeclimate(self):
-        self.assertEqual(True, os.path.isfile('./.codeclimate.yml'))
+        self.assertTrue(os.path.isfile('./.codeclimate.yml'))
 
     # ./CHANGELOG.md
     def test_changelog(self):
-        self.assertEqual(True, os.path.isfile('./CHANGELOG.md'))
+        self.assertTrue(os.path.isfile('./CHANGELOG.md'))
 
     # ./CODE_OF_CONDUCT.md
     def test_code_of_conduct(self):
-        self.assertEqual(True, os.path.isfile('./CODE_OF_CONDUCT.md'))
+        self.assertTrue(os.path.isfile('./CODE_OF_CONDUCT.md'))
 
     # ./CONTRIBUTING.md
     def test_contributing(self):
-        self.assertEqual(True, os.path.isfile('./CONTRIBUTING.md'))
+        self.assertTrue(os.path.isfile('./CONTRIBUTING.md'))
 
     # ./.github/ISSUE_TEMPLATE
     def test_issue_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/ISSUE_TEMPLATE'))
+        self.assertTrue(os.path.isfile('./.github/ISSUE_TEMPLATE'))
 
     # ./LICENSE.md
     def test_license(self):
-        self.assertEqual(True, os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt'))
+        self.assertTrue(os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt'))
 
     # ./.github/PULL_REQUEST_TEMPLATE
     def test_pr_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/PULL_REQUEST_TEMPLATE'))
+        self.assertTrue(os.path.isfile('./.github/PULL_REQUEST_TEMPLATE'))
 
     # ./README.rst
     def test_readme(self):
-        self.assertEqual(True, os.path.isfile('./README.rst'))
+        self.assertTrue(os.path.isfile('./README.rst'))
 
     # ./TROUBLESHOOTING.md
     def test_troubleshooting(self):
-        self.assertEqual(True, os.path.isfile('./TROUBLESHOOTING.md'))
+        self.assertTrue(os.path.isfile('./TROUBLESHOOTING.md'))
 
     # ./USAGE.md
     def test_usage(self):
-        self.assertEqual(True, os.path.isfile('./USAGE.md'))
+        self.assertTrue(os.path.isfile('./USAGE.md'))
 
     # ./VERSION.txt
     def test_use_cases(self):
-        self.assertEqual(True, os.path.isfile('./VERSION.txt'))
+        self.assertTrue(os.path.isfile('./VERSION.txt'))
 
 if __name__ == '__main__':
     unittest.main()
