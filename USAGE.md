@@ -212,7 +212,7 @@ The format of the SMTP API section tag has the form:
 }
 ```
 
-<a name="subtitution-tags"></a>
+<a name="substitution-tags"></a>
 # Substitution Tags
 
 **This endpoint allows you to easily generate dynamic content for each recipient on your list.**
