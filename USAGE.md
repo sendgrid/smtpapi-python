@@ -151,7 +151,7 @@ You can assign up to 10 categories per message:
 }
 ```
 
-<a name="schedulling-parameters"></a>
+<a name="scheduling-parameters"></a>
 # Scheduling Parameters
 **This endpoint allows you to send large volumes of email in queued batches or target individual recipients by specifying a custom UNIX timestamp parameter.**
 
