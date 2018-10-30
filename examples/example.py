@@ -6,6 +6,7 @@ import time
 
 if __name__ == '__main__' and __package__ is None:
     from os import sys, path
+
     sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
     from smtpapi import SMTPAPIHeader
 
@@ -21,7 +22,7 @@ header.set_substitutions({'key': ['value1', 'value2']})
 
 # [Unique Arguments](http://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html)
 # header.add_unique_arg('key', 'value')
-header.set_unique_args({'key':'value'})
+header.set_unique_args({'key': 'value'})
 
 # [Categories](http://sendgrid.com/docs/API_Reference/SMTP_API/categories.html)
 # header.add_category('category')
@@ -43,6 +44,6 @@ header.set_ip_pool("testPool")
 # [Scheduling Parameters](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
 # header.add_send_each_at(unix_timestamp) #  must be a unix timestamp
 # header.set_send_each_at([]) #  must be a unix timestamp
-header.set_send_at(int(time.time())) #  must be a unix timestamp
+header.set_send_at(int(time.time()))  # must be a unix timestamp
 
 print(header.json_string())

@@ -87,6 +87,7 @@ class TestSMTPAPI(unittest.TestCase):
                     break
         self.assertEqual('Copyright (c) 2013-%s SendGrid, Inc.' % datetime.datetime.now().year, copyright_line)
 
+
 class TestRepository(unittest.TestCase):
 
     def setUp(self):
@@ -121,6 +122,7 @@ class TestRepository(unittest.TestCase):
                                 msg=self.file_not_found_message.format('" or "'.join(file_path)))
             else:
                 self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
+
 
 if __name__ == '__main__':
     unittest.main()
