@@ -96,7 +96,6 @@ class TestSMTPAPI(unittest.TestCase):
         )
 
 
-
 class TestRepository(unittest.TestCase):
 
     def setUp(self):
@@ -138,7 +137,6 @@ class TestRepository(unittest.TestCase):
                     os.path.exists(file_path),
                     msg=self.file_not_found_message.format(file_path),
                 )
-
 
 
 if __name__ == '__main__':
