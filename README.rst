@@ -2,7 +2,7 @@
    :target: https://www.sendgrid.com
    :alt: SendGrid Logo
 
-|Travis Badge| |Email Notifications Badge| |Twitter Follow| |Codecov branch| |Python Versions| |PyPI Version| |GitHub contributors| |MIT Licensed|
+|Travis Badge| |Email Notifications Badge| |Twitter Follow| |Codecov branch| |PyPI Version| |GitHub contributors| |MIT Licensed|
 
 **This module helps build SendGrid's SMTP API headers.**
 
@@ -139,8 +139,6 @@ License
    :target: https://twitter.com/sendgrid
 .. |Codecov branch| image:: https://img.shields.io/codecov/c/github/sendgrid/smtpapi-python/master.svg?style=flat-square&label=Codecov+Coverage
    :target: https://codecov.io/gh/sendgrid/smtpapi-python
-.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/smtpapi.svg
-   :target: https://pypi.org/project/smtpapi/
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/smtpapi.svg
    :target: https://pypi.org/project/smtpapi/
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/sendgrid/smtpapi-python.svg
