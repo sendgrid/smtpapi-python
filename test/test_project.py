@@ -5,6 +5,7 @@ try:
 except ImportError:
     import unittest
 
+
 class ProjectTests(unittest.TestCase):
 
     # ./Docker or docker/Docker
@@ -70,6 +71,7 @@ class ProjectTests(unittest.TestCase):
     # ./VERSION.txt
     def test_use_cases(self):
         self.assertEqual(True, os.path.isfile('./VERSION.txt'))
+
 
 if __name__ == '__main__':
     unittest.main()

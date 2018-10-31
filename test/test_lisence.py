@@ -1,6 +1,7 @@
 import sendgrid
 from sendgrid.helpers.mail import *
 from sendgrid.version import __version__
+
 try:
     import unittest2 as unittest
 except ImportError:
@@ -12,6 +13,7 @@ import time
 import datetime
 
 host = "http://localhost:4010"
+
 
 def test_license_year(self):
     LICENSE_FILE = 'license.txt'
