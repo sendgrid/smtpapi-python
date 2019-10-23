@@ -11,6 +11,8 @@ import subprocess
 import sys
 from datetime import datetime
 
+"""This is my First Pull Request on Github for the HacktoberFest Challenge !"""
+
 # Regex patterns
 RELEASE_MD_PATTERN = re.compile(r'## \[(\d+\.\d+\.\d+)\]')
 MERGED_PR_PATTERN = re.compile(
