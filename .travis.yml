@@ -6,10 +6,11 @@ python:
  - '3.6'
 install:
   - make install
+  - make test-install
   - pip install codecov coverage
 script:
   - make test
-  - . venv/bin/activate; coverage run test/__init__.py
+  - coverage run test/__init__.py
 after_success:
   - codecov
 deploy:

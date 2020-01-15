@@ -1,4 +1,4 @@
-.PHONY: venv install test clean nopyc
+.PHONY: venv install test-install test clean nopyc
 
 venv:
 	@python --version || (echo "Python is not installed, please install Python 2 or Python 3"; exit 1);
@@ -6,11 +6,12 @@ venv:
 
 install: venv
 	. venv/bin/activate; python setup.py install
+	. venv/bin/activate; pip install .
 
 test-install:
 	. venv/bin/activate; pip install -r test/requirements.txt
 
-test: test-install
+test:
 	. venv/bin/activate; python -m unittest discover -v
 	. venv/bin/activate; python test/__init__.py
 
