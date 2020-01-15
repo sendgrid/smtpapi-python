@@ -10,7 +10,7 @@ install:
   - pip install codecov coverage
 script:
   - make test
-  - coverage run test/__init__.py
+  - . venv/bin/activate; coverage run test/__init__.py
 after_success:
   - codecov
 deploy:
