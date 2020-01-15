@@ -1,15 +1,15 @@
 language: python
 python:
- - '2.6'
  - '2.7'
  - '3.4'
  - '3.5'
+ - '3.6'
 install:
   - make install
   - pip install codecov coverage
 script:
   - make test
-  - coverage run test/__init__.py
+  - . venv/bin/activate; coverage run test/__init__.py
 after_success:
   - codecov
 deploy:
