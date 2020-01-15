@@ -7,7 +7,7 @@ python:
 install:
   - make install
   - make test-install
-  - pip install codecov coverage
+  - pip install codecov
 script:
   - make test
   - . venv/bin/activate; coverage run test/__init__.py
