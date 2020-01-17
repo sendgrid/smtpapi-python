@@ -44,17 +44,17 @@ class ProjectTests(unittest.TestCase):
     def test_contributing(self):
         self.assertEqual(True, os.path.isfile('./CONTRIBUTING.md'))
 
-    # ./.github/ISSUE_TEMPLATE
+    # ./ISSUE_TEMPLATE.md
     def test_issue_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/ISSUE_TEMPLATE'))
+        self.assertEqual(True, os.path.isfile('./ISSUE_TEMPLATE.md'))
 
     # ./LICENSE.md
     def test_license(self):
         self.assertEqual(True, os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt'))
 
-    # ./.github/PULL_REQUEST_TEMPLATE
+    # ./PULL_REQUEST_TEMPLATE.md
     def test_pr_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/PULL_REQUEST_TEMPLATE'))
+        self.assertEqual(True, os.path.isfile('./PULL_REQUEST_TEMPLATE.md'))
 
     # ./README.rst
     def test_readme(self):

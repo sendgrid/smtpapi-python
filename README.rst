@@ -129,7 +129,7 @@ License
 .. _Sign the CLA to Create a Pull Request: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla
 .. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase
 .. _Developer Experience Team: mailto:dx@sendgrid.com
-.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.txt
+.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
 
 .. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=master
    :target: https://travis-ci.org/sendgrid/smtpapi-python
@@ -146,4 +146,4 @@ License
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/sendgrid/smtpapi-python.svg
    :target: https://github.com/sendgrid/smtpapi-python/graphs/contributors
 .. |MIT Licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.txt
+   :target: https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
