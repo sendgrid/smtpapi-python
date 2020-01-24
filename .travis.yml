@@ -18,6 +18,8 @@ deploy:
   user: __token__
   password:
     secure: $PYPI_TOKEN
+  edge: true
+  distributions: sdist bdist_wheel
   on:
     branch: master
     condition: "$TRAVIS_TEST_RESULT = 0"
