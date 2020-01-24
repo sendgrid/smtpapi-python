@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-01-24] Version 0.4.1
+--------------------------
+**Library - Fix**
+- [PR #103](https://github.com/sendgrid/smtpapi-python/pull/103): travis update for autodeploy. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-01-24] Version 0.4.0
 --------------------------
 **Library - Docs**
