@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-02-19] Version 0.4.2
+--------------------------
+**Library - Fix**
+- [PR #53](https://github.com/sendgrid/smtpapi-python/pull/53): "similar-code" issue in smtpapi/__init__.py. Thanks to [@andre8359](https://github.com/andre8359)!
+
+**Library - Docs**
+- [PR #88](https://github.com/sendgrid/smtpapi-python/pull/88): Fix typos and grammatical errors. Thanks to [@vinayak42](https://github.com/vinayak42)!
+
+
 [2020-01-24] Version 0.4.1
 --------------------------
 **Library - Fix**
