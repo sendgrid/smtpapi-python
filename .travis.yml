@@ -18,10 +18,9 @@ after_success:
   - codecov
 deploy:
   provider: pypi
-  user: __token__
-  password:
-    secure: $PYPI_TOKEN
-  edge: true
+  user: "__token__"
+  password: $PYPI_TOKEN
+  skip_cleanup: true
   distributions: sdist bdist_wheel
   on:
     branch: master
