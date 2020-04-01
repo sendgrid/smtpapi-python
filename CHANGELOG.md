@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-04-01] Version 0.4.3
+--------------------------
+**Library - Chore**
+- [PR #104](https://github.com/sendgrid/smtpapi-python/pull/104): add Python 3.8 to Travis. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-02-19] Version 0.4.2
 --------------------------
 **Library - Fix**
