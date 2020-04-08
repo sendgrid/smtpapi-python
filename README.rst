@@ -107,10 +107,8 @@ Steps:
 About
 =====
 
-**smtpapi-python** is guided and supported by the SendGrid `Developer Experience Team`_.
-
-**smtpapi-python** is maintained and funded by SendGrid, Inc.
-The names and logos for **smtpapi-python** are trademarks of SendGrid, Inc.
+**smtpapi-python** is maintained and funded by Twilio SendGrid, Inc.
+The names and logos for **smtpapi-python** are trademarks of Twilio SendGrid, Inc.
 
 License
 =======
@@ -128,7 +126,6 @@ License
 .. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#submit-a-bug-report
 .. _Sign the CLA to Create a Pull Request: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla
 .. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase
-.. _Developer Experience Team: mailto:dx@sendgrid.com
 .. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
 
 .. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=master
