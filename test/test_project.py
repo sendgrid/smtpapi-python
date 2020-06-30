@@ -9,16 +9,16 @@ except ImportError:
 class ProjectTests(unittest.TestCase):
 
     # ./Docker or docker/Docker
-    def test_docker_dir(self):
-        self.assertEqual(True, os.path.isdir("./Dockerfile") || os.path.isdir("./docker/Dockerfile"))
+    def test_dockerfile(self):
+        self.assertEqual(True, os.path.isfile("./Dockerfile") or os.path.isfile("./docker/Dockerfile"))
 
     # ./docker-compose.yml or ./docker/docker-compose.yml
     def test_docker_compose(self):
-        self.assertEqual(True, os.path.isfile('./docker-compose.yml') || os.path.isfile('./docker/docker-compose.yml'))
+        self.assertEqual(True, os.path.isfile('./docker-compose.yml') or os.path.isfile('./docker/docker-compose.yml'))
 
     # ./.env_sample
     def test_env(self):
-        self.assertEqual(True, os.path.isfile('./env_sample'))
+        self.assertEqual(True, os.path.isfile('./.env_sample'))
 
     # ./.gitignore
     def test_gitignore(self):
@@ -44,17 +44,17 @@ class ProjectTests(unittest.TestCase):
     def test_contributing(self):
         self.assertEqual(True, os.path.isfile('./CONTRIBUTING.md'))
 
-    # ./.github/ISSUE_TEMPLATE
+    # ./ISSUE_TEMPLATE.md
     def test_issue_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/ISSUE_TEMPLATE'))
+        self.assertEqual(True, os.path.isfile('./ISSUE_TEMPLATE.md'))
 
     # ./LICENSE.md
     def test_license(self):
-        self.assertEqual(True, os.path.isfile('./LICENSE.md') || os.path.isfile('./LICENSE.txt'))
+        self.assertEqual(True, os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt'))
 
-    # ./.github/PULL_REQUEST_TEMPLATE
+    # ./PULL_REQUEST_TEMPLATE.md
     def test_pr_template(self):
-        self.assertEqual(True, os.path.isfile('./.github/PULL_REQUEST_TEMPLATE'))
+        self.assertEqual(True, os.path.isfile('./PULL_REQUEST_TEMPLATE.md'))
 
     # ./README.rst
     def test_readme(self):
