@@ -11,7 +11,6 @@ install:
   - make install
   - make test-install
   - pip install codecov
-  - pip install flake8
 script:
   - make test
   - . venv/bin/activate; coverage run test/__init__.py
