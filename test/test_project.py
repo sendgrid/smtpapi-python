@@ -11,7 +11,7 @@ class ProjectTests(unittest.TestCase):
     # ./Docker or docker/Docker
     def test_docker_dir(self):
         self.assertTrue(
-            os.path.isdir("./Dockerfile")
+            os.path.isfile("./Dockerfile")
             or os.path.isdir("./docker/Dockerfile")
         )
 
@@ -24,7 +24,7 @@ class ProjectTests(unittest.TestCase):
 
     # ./.env_sample
     def test_env(self):
-        self.assertTrue(os.path.isfile('./env_sample'))
+        self.assertTrue(os.path.isfile('./.env_sample'))
 
     # ./.gitignore
     def test_gitignore(self):
