@@ -1,2 +1,2 @@
 [flake8]
-exclude = build,venv,prism,.svn,CVS,.bzr,.hg,.git,__pycache__,.tox,.eggs,*.egg
+exclude = build,venv,.svn,CVS,.bzr,.hg,.git,__pycache__,.tox,.eggs,*.egg
