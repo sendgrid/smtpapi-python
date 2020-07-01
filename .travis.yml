@@ -1,25 +1,40 @@
+dist: xenial # required for Python >= 3.7
 language: python
 python:
- - '2.6'
- - '2.7'
- - '3.4'
- - '3.5'
+  - '2.7'
+  - '3.4'
+  - '3.5'
+  - '3.6'
+  - '3.7'
+  - '3.8'
 install:
- - python setup.py install
- - pip install codecov
- - if [[ $TRAVIS_PYTHON_VERSION != 2.6 ]]; then pip install flake8; fi
+  - make install
+  - make test-install
+  - pip install codecov
+  - pip install flake8
 script:
- - python test/__init__.py
- - coverage run test/__init__.py
- - if [[ $TRAVIS_PYTHON_VERSION != 2.6 ]]; then flake8 --statistics --count; fi
+  - make test
+  - . venv/bin/activate; coverage run test/__init__.py
+  - . venv/bin/activate; flake8 --statistics --count
 after_success:
- - codecov
+  - codecov
+deploy:
+  provider: pypi
+  user: "__token__"
+  password: $PYPI_TOKEN
+  skip_cleanup: true
+  distributions: sdist bdist_wheel
+  on:
+    branch: master
+    condition: "$TRAVIS_TEST_RESULT = 0"
+    tags: true
+    python: '3.6'
+
 notifications:
-  hipchat:
+  slack:
+    if: branch = master
+    on_pull_requests: false
+    on_success: never
+    on_failure: change
     rooms:
-      secure: XbJIz0PtZo+/G6UCnCxLgYDPk7OS8fpyiQwpnfGBr2xW1Z5vhWS+jrR6GndAFJfW9mmgcvq9dJL4bSThITebcZJJtztfuWnGUnONKbfSsFcuEr6o3uGPNmfVwZ9JAL78BUU861A/ykcWe/6lkovlUphkDLa2/l1r7t7TGD75f5k=
-    template:
-    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
-      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
-    format: html
+      - secure: GBYjICnJwGDgb3CM8STuWXESuR2hUZHkl1oCQC8Vd9WmId281AeMflMw3GIo9Ay+uY0+TXUIUihxS61SuX9T/LP4lV7b47dH9BzQ7IbVVfCaOtgq7KmkD4dCeaA8X5zvTktrpMcS1b2WNKKaExCkuetj80dJRSX5vw1s+zl3o5U=

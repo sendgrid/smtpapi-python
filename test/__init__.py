@@ -82,18 +82,14 @@ class TestSMTPAPI(unittest.TestCase):
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
     def test_license_year(self):
-        LICENSE_FILE = 'LICENSE.txt'
+        LICENSE_FILE = 'LICENSE.md'
         copyright_line = ''
         with open(LICENSE_FILE, 'r') as f:
             for line in f:
                 if line.startswith('Copyright'):
                     copyright_line = line.strip()
                     break
-        self.assertEqual(
-            'Copyright (c) 2013-%s SendGrid, Inc.'
-            % datetime.datetime.now().year,
-            copyright_line
-        )
+        self.assertEqual('Copyright (C) %s, Twilio SendGrid, Inc. <help@twilio.com>' % datetime.datetime.now().year, copyright_line)
 
 
 class TestRepository(unittest.TestCase):
@@ -105,8 +101,8 @@ class TestRepository(unittest.TestCase):
             ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.codeclimate.yml',
             './.env_sample',
-            './.github/ISSUE_TEMPLATE',
-            './.github/PULL_REQUEST_TEMPLATE',
+            './ISSUE_TEMPLATE.md',
+            './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
             './.travis.yml',
             './CHANGELOG.md',

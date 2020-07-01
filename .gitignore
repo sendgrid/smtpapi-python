@@ -12,3 +12,4 @@ include/
 lib/
 sdist
 smtpapi/VERSION.txt
+venv/

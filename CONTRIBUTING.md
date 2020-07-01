@@ -51,7 +51,7 @@ Before you decide to create a new issue, please try the following:
 
 ### Please use our Bug Report Template
 
-In order to make the process easier, we've included a [sample bug report template](https://github.com/sendgrid/smtpapi-python/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/TryGhost/Ghost/)). The template uses [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
+In order to make the process easier, we've included a [sample bug report template](ISSUE_TEMPLATE.md).
 
 <a name="improvements-to-the-codebase"></a>
 ## Improvements to the Codebase
@@ -173,5 +173,3 @@ Please run your code through:
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
     with a clear title and description against the `development` branch. All tests must be passing before we will review the PR.
-
-If you have any additional questions, please feel free to [email](mailto:dx@sendgrid.com) us or create an issue in this repo.
