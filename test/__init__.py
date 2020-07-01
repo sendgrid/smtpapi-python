@@ -89,7 +89,11 @@ class TestSMTPAPI(unittest.TestCase):
                 if line.startswith('Copyright'):
                     copyright_line = line.strip()
                     break
-        self.assertEqual('Copyright (C) %s, Twilio SendGrid, Inc. <help@twilio.com>' % datetime.datetime.now().year, copyright_line)
+        self.assertEqual(
+            'Copyright (C) %s, Twilio SendGrid, Inc. <help@twilio.com>'
+            % datetime.datetime.now().year,
+            copyright_line
+        )
 
 
 class TestRepository(unittest.TestCase):
