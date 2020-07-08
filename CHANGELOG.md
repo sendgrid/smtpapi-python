@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-07-08] Version 0.4.4
+--------------------------
+**Library - Fix**
+- [PR #86](https://github.com/sendgrid/smtpapi-python/pull/86): Fix and add flake8 to CI. Thanks to [@hugovk](https://github.com/hugovk)!
+
+**Library - Docs**
+- [PR #99](https://github.com/sendgrid/smtpapi-python/pull/99): add use cases directory and README.md file for use cases. Thanks to [@mtroiani](https://github.com/mtroiani)!
+
+
 [2020-04-01] Version 0.4.3
 --------------------------
 **Library - Chore**
