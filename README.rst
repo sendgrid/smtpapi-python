@@ -90,7 +90,6 @@ Quick links:
 
 -  `Feature Request`_
 -  `Bug Reports`_
--  `Sign the CLA to Create a Pull Request`_
 -  `Improvements to the Codebase`_
 
 Local Setup of the Project
@@ -124,7 +123,6 @@ License
 .. _CONTRIBUTING: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md
 .. _Feature Request: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#feature-request
 .. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#submit-a-bug-report
-.. _Sign the CLA to Create a Pull Request: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#cla
 .. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase
 .. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
 
