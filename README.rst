@@ -116,24 +116,24 @@ License
 `The MIT License (MIT)`_
 
 .. _SendGrid documentation: https://sendgrid.com/docs/API_Reference/SMTP_API/index.html
-.. _CHANGELOG: https://github.com/sendgrid/smtpapi-python/blob/master/CHANGELOG.md
+.. _CHANGELOG: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CHANGELOG.md
 .. _free level: https://sendgrid.com/free?source=sendgrid-python
 .. _SENDGRID_API_KEY: https://app.sendgrid.com/settings/api_keys
-.. _Example Code: https://github.com/sendgrid/smtpapi-python/tree/master/examples
+.. _Example Code: https://github.com/sendgrid/smtpapi-python/tree/HEAD/examples
 .. _milestones: https://github.com/sendgrid/smtpapi-python/milestones
-.. _CONTRIBUTING: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md
-.. _Feature Request: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#feature-request
-.. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#submit-a-bug-report
-.. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/master/CONTRIBUTING.md#improvements-to-the-codebase
-.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
+.. _CONTRIBUTING: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md
+.. _Feature Request: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#feature-request
+.. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#submit-a-bug-report
+.. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#improvements-to-the-codebase
+.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE.md
 
-.. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=master
+.. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=main
    :target: https://travis-ci.org/sendgrid/smtpapi-python
 .. |Email Notifications Badge| image:: https://dx.sendgrid.com/badge/python
    :target: https://dx.sendgrid.com/newsletter/python
 .. |Twitter Follow| image:: https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow
    :target: https://twitter.com/sendgrid
-.. |Codecov branch| image:: https://img.shields.io/codecov/c/github/sendgrid/smtpapi-python/master.svg?style=flat-square&label=Codecov+Coverage
+.. |Codecov branch| image:: https://img.shields.io/codecov/c/github/sendgrid/smtpapi-python/main.svg?style=flat-square&label=Codecov+Coverage
    :target: https://codecov.io/gh/sendgrid/smtpapi-python
 .. |Python Versions| image:: https://img.shields.io/pypi/pyversions/smtpapi.svg
    :target: https://pypi.org/project/smtpapi/
@@ -142,4 +142,4 @@ License
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/sendgrid/smtpapi-python.svg
    :target: https://github.com/sendgrid/smtpapi-python/graphs/contributors
 .. |MIT Licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/sendgrid/smtpapi-python/blob/master/LICENSE.md
+   :target: https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE.md
