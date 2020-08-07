@@ -85,7 +85,7 @@ All PRs require passing tests before the PR will be reviewed.
 
 All test files are in the [`test`](test) directory.
 
-For the purposes of contributing to this repo, please update the [`__init__.py`](https://github.com/sendgrid/smtpapi-python/blob/HEAD/test/__init__.py) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`__init__.py`](test/__init__.py) file with unit tests as you modify the code.
 
 ```bash
 python setup.py install
