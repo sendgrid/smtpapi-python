@@ -46,7 +46,11 @@ class TestSMTPAPI(unittest.TestCase):
 
     def test_set(self):
         header = SMTPAPIHeader()
-        header.set_tos(["test@email.com", "test2@email.com", "test3@email.com"])
+        header.set_tos([
+            "test@email.com",
+            "test2@email.com",
+            "test3@email.com",
+        ])
         header.set_substitutions({
             "subKey": ["subValue"],
             "decimalKey": [decimal.Decimal("1.23456789")]
@@ -78,14 +82,19 @@ class TestSMTPAPI(unittest.TestCase):
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
     def test_license_year(self):
-        LICENSE_FILE = 'LICENSE.txt'
+        LICENSE_FILE = 'LICENSE.md'
         copyright_line = ''
         with open(LICENSE_FILE, 'r') as f:
             for line in f:
                 if line.startswith('Copyright'):
                     copyright_line = line.strip()
                     break
-        self.assertEqual('Copyright (c) 2013-%s SendGrid, Inc.' % datetime.datetime.now().year, copyright_line)
+        self.assertEqual(
+            'Copyright (C) %s, Twilio SendGrid, Inc. <help@twilio.com>'
+            % datetime.datetime.now().year,
+            copyright_line
+        )
+
 
 class TestRepository(unittest.TestCase):
 
@@ -96,8 +105,8 @@ class TestRepository(unittest.TestCase):
             ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.codeclimate.yml',
             './.env_sample',
-            './.github/ISSUE_TEMPLATE',
-            './.github/PULL_REQUEST_TEMPLATE',
+            './ISSUE_TEMPLATE.md',
+            './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
             './.travis.yml',
             './CHANGELOG.md',
@@ -117,10 +126,18 @@ class TestRepository(unittest.TestCase):
         for file_path in self.required_files:
             if isinstance(file_path, list):
                 # multiple file paths: assert that any one of the files exists
-                self.assertTrue(any(os.path.exists(f) for f in file_path),
-                                msg=self.file_not_found_message.format('" or "'.join(file_path)))
+                self.assertTrue(
+                    any(os.path.exists(f) for f in file_path),
+                    msg=self.file_not_found_message.format(
+                        '" or "'.join(file_path)
+                    ),
+                )
             else:
-                self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
+                self.assertTrue(
+                    os.path.exists(file_path),
+                    msg=self.file_not_found_message.format(file_path),
+                )
+
 
 if __name__ == '__main__':
     unittest.main()
