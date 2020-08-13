@@ -96,11 +96,11 @@ Quick links:
 Local Setup of the Project
 ==========================
 
-The simplest local development workflow is by using docker.
+The simplest local development workflow is by using Docker.
 
 Steps:
 
-1. Install Docker
+1. Install [Docker](https://www.docker.com/)
 2. Run ``docker-compose build`` (this builds the container)
 3. Run ``docker-compose up`` (this runs tests by default)
 
