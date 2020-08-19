@@ -1,6 +1,16 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2020-08-19] Version 0.4.5
+--------------------------
+**Library - Docs**
+- [PR #72](https://github.com/sendgrid/smtpapi-python/pull/72): Fix .md with Grammar.ly. Thanks to [@ssiddhantsharma](https://github.com/ssiddhantsharma)!
+- [PR #70](https://github.com/sendgrid/smtpapi-python/pull/70): Correct *.md files using Grammarly. Thanks to [@myzeprog](https://github.com/myzeprog)!
+
+**Library - Chore**
+- [PR #105](https://github.com/sendgrid/smtpapi-python/pull/105): update GitHub branch references to use HEAD. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-07-08] Version 0.4.4
 --------------------------
 **Library - Fix**
