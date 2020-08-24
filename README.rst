@@ -20,7 +20,6 @@ Table of Contents
 -  `Installation <#installation>`__
 -  `Quick Start <#quick-start>`__
 -  `Usage <#usage>`__
--  `Roadmap <#roadmap>`__
 -  `How to Contribute <#how-to-contribute>`__
 -  `Local Setup of the Project <#local-setup-of-the-project>`__
 -  `About <#about>`__
@@ -76,12 +75,6 @@ Usage
 - `SendGrid documentation`_
 - `Example Code`_
 
-Roadmap
-=======
-
-If you are interested in the future direction of this project, please take a look at our `milestones`_.
-We would love to hear your feedback.
-
 How to Contribute
 =================
 
@@ -120,7 +113,6 @@ License
 .. _free level: https://sendgrid.com/free?source=sendgrid-python
 .. _SENDGRID_API_KEY: https://app.sendgrid.com/settings/api_keys
 .. _Example Code: https://github.com/sendgrid/smtpapi-python/tree/HEAD/examples
-.. _milestones: https://github.com/sendgrid/smtpapi-python/milestones
 .. _CONTRIBUTING: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md
 .. _Feature Request: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#feature-request
 .. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#submit-a-bug-report
