@@ -160,5 +160,5 @@ Please run your code through:
 ## Code Reviews<a name="code-reviews"></a>
 If you can, please look at open PRs and review them.
 Give feedback and help us merge these PRs much faster!
-If you don't know how, Github has some great
+If you don't know how, GitHub has some great
 [information on how to review a Pull Request](https://help.github.com/articles/about-pull-request-reviews/).
