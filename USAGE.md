@@ -36,9 +36,9 @@ print(header.json_string())
 * [Using the SMTP API](#use-smtp-api)
 * [Settings](#settings)
 * [Categories](#categories)
-* [Schedulling Parameters](#schedulling-parameters)
+* [Scheduling Parameters](#scheduling-parameters)
 * [Section Tags](#section-tags)
-* [Subtitution Tags](#subtitution-tags)
+* [Substitution Tags](#substitution-tags)
 * [Suppression Groups](#suppression-groups)
 * [Unique Arguments](#unique-arguments)
 
@@ -123,7 +123,7 @@ Sends a BCC copy of the email created in this transaction to the address specifi
 # Categories
 **This endpoint allows you to add categories to the X-SMTPAPI header of the emails you send via SendGrid**
 
-By adding categories to the X-SMTPAPI header of the emails that you send via SendGrid you can to track emails based on your own categorization system.
+By adding categories to the X-SMTPAPI header of the emails that you send via SendGrid you can to track emails based on your categorization system.
 
 Categories must be in 7bit encoding using the US-ASCII character set, and should be used to group messages together by broad topic. If you need to attach unique data or identifiers to a message, use [Unique Arguments](https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html) instead.
 
@@ -151,8 +151,8 @@ You can assign up to 10 categories per message:
 }
 ```
 
-<a name="schedulling-parameters"></a>
-# Schedulling Parameters
+<a name="scheduling-parameters"></a>
+# Scheduling Parameters
 **This endpoint allows you to send large volumes of email in queued batches or target individual recipients by specifying a custom UNIX timestamp parameter.**
 
 This parameter allows SendGrid to begin processing a customer’s email requests before sending. SendGrid will then queue those messages and release them when the timestamp is exceeded. This technique allows for a more efficient way to distribute large email requests and can improve overall mail delivery time performance. 
@@ -168,7 +168,7 @@ Using the parameters defined below, you can queue batches of emails targeting in
 **Note: Using both send_at and send_each_at is not valid and will cause your request to be dropped.**
 
 ### Send At
-To schedule a send request for a large batch of emails use the send_at parameter which will send all emails at approximately the same time. send_at is a UNIX timestamp.
+To schedule a send request for a large batch of emails, use the send_at parameter which will send all emails at approximately the same time. send_at is a UNIX timestamp.
 
 Example of **`send_at`** email header
 
@@ -212,8 +212,8 @@ The format of the SMTP API section tag has the form:
 }
 ```
 
-<a name="subtitution-tags"></a>
-# Subtitution Tags
+<a name="substitution-tags"></a>
+# Substitution Tags
 
 **This endpoint allows you to easily generate dynamic content for each recipient on your list.**
 
