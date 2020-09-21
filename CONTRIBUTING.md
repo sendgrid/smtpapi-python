@@ -7,6 +7,7 @@ Hello! Thank you for choosing to help contribute to one of the Twilio SendGrid o
 - [Testing](#testing)
 - [Style Guidelines & Naming Conventions](#style-guidelines-and-naming-conventions)
 - [Creating a Pull Request](#creating-a-pull-request)
+- [Code Reviews](#code-reviews)
 
 <a name="feature-request"></a>
 ## Feature Request
@@ -155,3 +156,9 @@ Please run your code through:
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
     with a clear title and description against the `development` branch. All tests must be passing before we will review the PR.
+
+## Code Reviews<a name="code-reviews"></a>
+If you can, please look at open PRs and review them.
+Give feedback and help us merge these PRs much faster!
+If you don't know how, GitHub has some great
+[information on how to review a Pull Request](https://help.github.com/articles/about-pull-request-reviews/).

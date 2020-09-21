@@ -85,6 +85,7 @@ Quick links:
 -  `Feature Request`_
 -  `Bug Reports`_
 -  `Improvements to the Codebase`_
+-  `Review Pull Requests`_
 
 Local Setup of the Project
 ==========================
@@ -117,6 +118,7 @@ License
 .. _Feature Request: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#feature-request
 .. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#submit-a-bug-report
 .. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#improvements-to-the-codebase
+.. _Review Pull Requests: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#code-reviews)
 .. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE.md
 
 .. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=main
