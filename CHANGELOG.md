@@ -1,6 +1,13 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2020-09-28] Version 0.4.6
+--------------------------
+**Library - Docs**
+- [PR #57](https://github.com/sendgrid/smtpapi-python/pull/57): Few typos and grammatical mistake corrected. Thanks to [@yudhik11](https://github.com/yudhik11)!
+- [PR #61](https://github.com/sendgrid/smtpapi-python/pull/61): Add pull request info to CONTRIBUTING and README. Thanks to [@shorrock](https://github.com/shorrock)!
+
+
 [2020-08-19] Version 0.4.5
 --------------------------
 **Library - Docs**
