@@ -50,11 +50,9 @@ class ProjectTests(unittest.TestCase):
     def test_issue_template(self):
         self.assertTrue(os.path.isfile('./ISSUE_TEMPLATE.md'))
 
-    # ./LICENSE.md
+    # ./LICENSE
     def test_license(self):
-        self.assertTrue(
-            os.path.isfile('./LICENSE.md') or os.path.isfile('./LICENSE.txt')
-        )
+        self.assertTrue(os.path.isfile('./LICENSE'))
 
     # ./PULL_REQUEST_TEMPLATE.md
     def test_pr_template(self):

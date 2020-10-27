@@ -82,7 +82,7 @@ class TestSMTPAPI(unittest.TestCase):
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
     def test_license_year(self):
-        LICENSE_FILE = 'LICENSE.md'
+        LICENSE_FILE = 'LICENSE'
         copyright_line = ''
         with open(LICENSE_FILE, 'r') as f:
             for line in f:
@@ -112,7 +112,7 @@ class TestRepository(unittest.TestCase):
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            ['./LICENSE.md', './LICENSE.txt'],
+            './LICENSE',
             './README.rst',
             './TROUBLESHOOTING.md',
             './USAGE.md',

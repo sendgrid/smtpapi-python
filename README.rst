@@ -119,7 +119,7 @@ License
 .. _Bug Reports: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#submit-a-bug-report
 .. _Improvements to the Codebase: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#improvements-to-the-codebase
 .. _Review Pull Requests: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#code-reviews)
-.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE.md
+.. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE
 
 .. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=main
    :target: https://travis-ci.org/sendgrid/smtpapi-python
@@ -136,4 +136,4 @@ License
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/sendgrid/smtpapi-python.svg
    :target: https://github.com/sendgrid/smtpapi-python/graphs/contributors
 .. |MIT Licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE.md
+   :target: https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE
