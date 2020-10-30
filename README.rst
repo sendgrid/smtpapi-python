@@ -121,8 +121,8 @@ License
 .. _Review Pull Requests: https://github.com/sendgrid/smtpapi-python/blob/HEAD/CONTRIBUTING.md#code-reviews)
 .. _The MIT License (MIT): https://github.com/sendgrid/smtpapi-python/blob/HEAD/LICENSE
 
-.. |Travis Badge| image:: https://travis-ci.org/sendgrid/smtpapi-python.svg?branch=main
-   :target: https://travis-ci.org/sendgrid/smtpapi-python
+.. |Travis Badge| image:: https://travis-ci.com/sendgrid/smtpapi-python.svg?branch=main
+   :target: https://travis-ci.com/sendgrid/smtpapi-python
 .. |Email Notifications Badge| image:: https://dx.sendgrid.com/badge/python
    :target: https://dx.sendgrid.com/newsletter/python
 .. |Twitter Follow| image:: https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow
