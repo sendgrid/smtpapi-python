@@ -1,4 +1,3 @@
----
 # Python Engines
 engines: 
   duplication:
@@ -20,6 +19,8 @@ ratings:
   paths:
     - "**.py"    # default for enable Radon analysis
     - "**.md"
+    - "**.inc"
+    - "**.module"
     
 # List the files or directories excluded from analysis.
 exclude_paths:
