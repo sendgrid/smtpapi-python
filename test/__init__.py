@@ -1,10 +1,14 @@
 import decimal
 import json
 import os
-import unittest
 import datetime
 
 from smtpapi import SMTPAPIHeader
+
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
 
 class TestSMTPAPI(unittest.TestCase):
@@ -101,8 +105,7 @@ class TestRepository(unittest.TestCase):
     def setUp(self):
 
         self.required_files = [
-            ['./Dockerfile', './docker/Dockerfile'],
-            ['./docker-compose.yml', './docker/docker-compose.yml'],
+            './Dockerfile',
             './.codeclimate.yml',
             './.env_sample',
             './ISSUE_TEMPLATE.md',
