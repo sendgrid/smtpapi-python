@@ -2,8 +2,14 @@ import unittest
 import json
 import decimal
 import os
+import datetime
 
 from smtpapi import SMTPAPIHeader
+
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
 
 class TestSMTPAPI(unittest.TestCase):
@@ -45,8 +51,11 @@ class TestSMTPAPI(unittest.TestCase):
 
     def test_set(self):
         header = SMTPAPIHeader()
-        header.set_tos(
-            ["test@email.com", "test2@email.com", "test3@email.com"])
+        header.set_tos([
+            "test@email.com",
+            "test2@email.com",
+            "test3@email.com",
+        ])
         header.set_substitutions({
             "subKey": ["subValue"],
             "decimalKey": [decimal.Decimal("1.23456789")]
@@ -77,28 +86,41 @@ class TestSMTPAPI(unittest.TestCase):
         header.add_filter('testFilter', 'filter', 'filterValue')
         self.assertEqual(self.dropsHeader, json.loads(header.json_string()))
 
+    def test_license_year(self):
+        LICENSE_FILE = 'LICENSE'
+        copyright_line = ''
+        with open(LICENSE_FILE, 'r') as f:
+            for line in f:
+                if line.startswith('Copyright'):
+                    copyright_line = line.strip()
+                    break
+        self.assertEqual(
+            'Copyright (C) %s, Twilio SendGrid, Inc. <help@twilio.com>'
+            % datetime.datetime.now().year,
+            copyright_line
+        )
+
 
 class TestRepository(unittest.TestCase):
 
     def setUp(self):
 
         self.required_files = [
-            ['./Dockerfile', './docker/Dockerfile'],
-            ['./docker-compose.yml', './docker/docker-compose.yml'],
+            './Dockerfile',
             './.codeclimate.yml',
             './.env_sample',
-            './.github/ISSUE_TEMPLATE',
-            './.github/PULL_REQUEST_TEMPLATE',
+            './ISSUE_TEMPLATE.md',
+            './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
             './.travis.yml',
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            ['./LICENSE.md', './License.txt'],
-            './README.md',
+            './LICENSE',
+            './README.rst',
             './TROUBLESHOOTING.md',
             './USAGE.md',
-            './USE_CASES.md',
+            './VERSION.txt',
         ]
 
         self.file_not_found_message = 'File "{0}" does not exist in repo!'
@@ -108,10 +130,17 @@ class TestRepository(unittest.TestCase):
         for file_path in self.required_files:
             if isinstance(file_path, list):
                 # multiple file paths: assert that any one of the files exists
-                self.assertTrue(any(os.path.exists(f) for f in file_path),
-                                msg=self.file_not_found_message.format('" or "'.join(file_path)))
+                self.assertTrue(
+                    any(os.path.exists(f) for f in file_path),
+                    msg=self.file_not_found_message.format(
+                        '" or "'.join(file_path)
+                    ),
+                )
             else:
-                self.assertTrue(os.path.exists(file_path), msg=self.file_not_found_message.format(file_path))
+                self.assertTrue(
+                    os.path.exists(file_path),
+                    msg=self.file_not_found_message.format(file_path),
+                )
 
 
 if __name__ == '__main__':
