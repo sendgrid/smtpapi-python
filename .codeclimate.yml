@@ -4,7 +4,7 @@ engines:
     enabled: true
     config:
       languages:
-      - python:
+      - python
   fixme:
     enabled: true
   pep8:
