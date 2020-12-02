@@ -1,6 +1,12 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2020-12-02] Version 0.4.7
+--------------------------
+**Library - Chore**
+- [PR #63](https://github.com/sendgrid/smtpapi-python/pull/63): Add .codeclimate.yml and update test/__init__.py. Thanks to [@geomars](https://github.com/geomars)!
+
+
 [2020-09-28] Version 0.4.6
 --------------------------
 **Library - Docs**
