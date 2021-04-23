@@ -1,26 +1,26 @@
-dist: xenial # required for Python >= 3.7
+dist: xenial
 language: python
 python:
-  - '2.7'
-  - '3.4'
-  - '3.5'
-  - '3.6'
-  - '3.7'
-  - '3.8'
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
 install:
-  - make install
-  - make test-install
-  - pip install codecov
+- make install
+- make test-install
+- pip install codecov
 script:
-  - make test
-  - . venv/bin/activate; coverage run test/__init__.py
-  - . venv/bin/activate; flake8 --statistics --count
+- make test
+- ". venv/bin/activate; coverage run test/__init__.py"
+- ". venv/bin/activate; flake8 --statistics --count"
 after_success:
-  - codecov
+- codecov
 deploy:
   provider: pypi
-  user: "__token__"
-  password: $PYPI_TOKEN
+  user: __token__
+  password: "$PYPI_TOKEN"
   skip_cleanup: true
   distributions: sdist bdist_wheel
   on:
@@ -28,7 +28,6 @@ deploy:
     condition: "$TRAVIS_TEST_RESULT = 0"
     tags: true
     python: '3.6'
-
 notifications:
   slack:
     if: branch = main
@@ -36,4 +35,4 @@ notifications:
     on_success: never
     on_failure: change
     rooms:
-      - secure: GBYjICnJwGDgb3CM8STuWXESuR2hUZHkl1oCQC8Vd9WmId281AeMflMw3GIo9Ay+uY0+TXUIUihxS61SuX9T/LP4lV7b47dH9BzQ7IbVVfCaOtgq7KmkD4dCeaA8X5zvTktrpMcS1b2WNKKaExCkuetj80dJRSX5vw1s+zl3o5U=
+      secure: jdCNaDBFGJTicPHjoCzfGifivx0O5qO32wRTJKfi6UAFFADa58txxQCG1Zj762neJUb7G7mZXmWVtg11y9oInxrRQkqpTi5zCNAFSBbkMVRPnl/f9oRS2R50XCMj+ONxy52de9315WPUSDPmU+qDtWdwz5UCiOQKmyl8FcXDw68=
