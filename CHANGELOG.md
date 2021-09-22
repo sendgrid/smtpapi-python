@@ -1,6 +1,12 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2021-09-22] Version 0.4.8
+--------------------------
+**Library - Chore**
+- [PR #106](https://github.com/sendgrid/smtpapi-python/pull/106): test against python v3.9. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+
+
 [2020-12-02] Version 0.4.7
 --------------------------
 **Library - Chore**
