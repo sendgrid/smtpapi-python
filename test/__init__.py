@@ -106,12 +106,10 @@ class TestRepository(unittest.TestCase):
 
         self.required_files = [
             './Dockerfile',
-            './.codeclimate.yml',
             './.env_sample',
             './ISSUE_TEMPLATE.md',
             './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
-            './.travis.yml',
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
