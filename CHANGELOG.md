@@ -1,6 +1,12 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2021-12-01] Version 0.4.9
+--------------------------
+**Library - Chore**
+- [PR #107](https://github.com/sendgrid/smtpapi-python/pull/107): migrate to GitHub Actions. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+
+
 [2021-09-22] Version 0.4.8
 --------------------------
 **Library - Chore**
