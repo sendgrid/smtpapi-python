@@ -29,7 +29,7 @@ jobs:
 
       - name: Build & Test
         run: make install test-install test
-  
+
   deploy:
     name: Deploy
     if: success() && github.ref_type == 'tag'
@@ -51,12 +51,19 @@ jobs:
           pip install wheel
           python setup.py sdist bdist_wheel
 
+      - name: Create GitHub Release
+        uses: sendgrid/dx-automator/actions/release@main
+        with:
+          footer: '**[pypi](https://pypi.org/project/smtpapi/${version})**'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
           password: ${{ secrets.PYPI_TOKEN }}
-  
+
   notify-on-failure:
     name: Slack notify on failure
     if: failure() && github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref_type == 'tag')
