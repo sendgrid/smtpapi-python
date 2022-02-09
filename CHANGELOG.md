@@ -1,6 +1,14 @@
 # Change Log
 All the notable changes to this project will be documented in this file.
 
+[2022-02-09] Version 0.4.11
+---------------------------
+**Library - Chore**
+- [PR #111](https://github.com/sendgrid/smtpapi-python/pull/111): upgrade supported language versions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #110](https://github.com/sendgrid/smtpapi-python/pull/110): add gh release to workflow. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #109](https://github.com/sendgrid/smtpapi-python/pull/109): merge test and deploy gh action workflows. Thanks to [@Hunga1](https://github.com/Hunga1)!
+
+
 [2022-01-12] Version 0.4.10
 ---------------------------
 **Library - Chore**
