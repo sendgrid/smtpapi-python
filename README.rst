@@ -10,8 +10,6 @@ Learn more about the SMTP API at `SendGrid documentation`_.
 
 Announcements
 =============
-**The default branch name for this repository has been changed to `main` as of 07/27/2020.**
-
 All the updates to this module are documented in our `CHANGELOG`_.
 
 Table of Contents
