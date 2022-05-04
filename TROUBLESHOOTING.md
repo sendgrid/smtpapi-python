@@ -1,7 +1,5 @@
 If you have a non-library SendGrid issue, please contact our [support team](https://support.sendgrid.com).
 
-If you can't find a solution below, please open an [issue](https://github.com/sendgrid/smtpapi-python/issues).
-
 ## Table of Contents
 
 * [Viewing the Request Body](#request-body)
